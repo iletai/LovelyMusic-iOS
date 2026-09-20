@@ -1,0 +1,5 @@
+• Cải thiện độ ổn định khi phát nhạc và tải bài hát nhanh hơn.
+• Tối ưu hiệu năng và độ mượt mà khi tìm kiếm.
+• Bổ sung tính năng Tiếp tục nghe (Continue Listening) giúp nghe lại bài hát trước đó dễ dàng.
+• Nâng cấp trải nghiệm phát nhạc trên CarPlay và hàng đợi phát.
+• Tinh chỉnh giao diện, cuộn mượt hơn và sửa một số lỗi nhỏ.

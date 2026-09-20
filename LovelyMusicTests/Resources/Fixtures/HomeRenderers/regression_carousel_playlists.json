@@ -1,0 +1,118 @@
+{
+    "_comment": "SOURCE: synthesized to mirror a real FEmusic_home musicCarouselShelfRenderer of playlists (two musicTwoRowItemRenderer items). Pins existing carousel mapping behavior — must pass today and after renderer-coverage fix.",
+    "contents": {
+        "singleColumnBrowseResultsRenderer": {
+            "tabs": [
+                {
+                    "tabRenderer": {
+                        "content": {
+                            "sectionListRenderer": {
+                                "contents": [
+                                    {
+                                        "musicCarouselShelfRenderer": {
+                                            "header": {
+                                                "musicCarouselShelfBasicHeaderRenderer": {
+                                                    "title": {
+                                                        "runs": [
+                                                            {
+                                                                "text": "Recommended playlists"
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            },
+                                            "contents": [
+                                                {
+                                                    "musicTwoRowItemRenderer": {
+                                                        "title": {
+                                                            "runs": [
+                                                                {
+                                                                    "text": "Chill Hits"
+                                                                }
+                                                            ]
+                                                        },
+                                                        "subtitle": {
+                                                            "runs": [
+                                                                {
+                                                                    "text": "YouTube Music"
+                                                                }
+                                                            ]
+                                                        },
+                                                        "thumbnailRenderer": {
+                                                            "musicThumbnailRenderer": {
+                                                                "thumbnail": {
+                                                                    "thumbnails": [
+                                                                        {
+                                                                            "url": "https://example.invalid/pl1.jpg",
+                                                                            "width": 226,
+                                                                            "height": 226
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            }
+                                                        },
+                                                        "navigationEndpoint": {
+                                                            "browseEndpoint": {
+                                                                "browseId": "VLPLchill0001",
+                                                                "browseEndpointContextSupportedConfigs": {
+                                                                    "browseEndpointContextMusicConfig": {
+                                                                        "pageType": "MUSIC_PAGE_TYPE_PLAYLIST"
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                {
+                                                    "musicTwoRowItemRenderer": {
+                                                        "title": {
+                                                            "runs": [
+                                                                {
+                                                                    "text": "Workout Mix"
+                                                                }
+                                                            ]
+                                                        },
+                                                        "subtitle": {
+                                                            "runs": [
+                                                                {
+                                                                    "text": "YouTube Music"
+                                                                }
+                                                            ]
+                                                        },
+                                                        "thumbnailRenderer": {
+                                                            "musicThumbnailRenderer": {
+                                                                "thumbnail": {
+                                                                    "thumbnails": [
+                                                                        {
+                                                                            "url": "https://example.invalid/pl2.jpg",
+                                                                            "width": 226,
+                                                                            "height": 226
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            }
+                                                        },
+                                                        "navigationEndpoint": {
+                                                            "browseEndpoint": {
+                                                                "browseId": "VLPLwork0002",
+                                                                "browseEndpointContextSupportedConfigs": {
+                                                                    "browseEndpointContextMusicConfig": {
+                                                                        "pageType": "MUSIC_PAGE_TYPE_PLAYLIST"
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}

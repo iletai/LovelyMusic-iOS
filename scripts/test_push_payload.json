@@ -1,0 +1,15 @@
+{
+  "Simulator Target Bundle": "com.lovelymusic.app",
+  "aps": {
+    "alert": {
+      "title": "🔥 Bài Hát Hot: Lofi Chill",
+      "body": "Khám phá danh sách bài hát Lofi mới nhất vừa được cập nhật!"
+    },
+    "badge": 1,
+    "sound": "default",
+    "mutable-content": 1
+  },
+  "media_url": "https://picsum.photos/600/300",
+  "route": "playlist",
+  "playlist_id": "VLPL_TEST_LOFI"
+}

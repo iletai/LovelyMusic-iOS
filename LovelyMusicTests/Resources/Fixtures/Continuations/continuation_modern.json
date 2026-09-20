@@ -1,0 +1,6 @@
+{
+    "_comment": "SOURCE: synthesized from YouTube schema documentation + InnerTune HomePage.kt continuation parsing (https://github.com/z-huang/InnerTune/blob/dev/innertube/src/main/java/com/zionhuang/innertube/pages/HomePage.kt) — InnerTune extracts continuation tokens via `continuationItemRenderer.continuationEndpoint.continuationCommand.token`. Round-1 audit (doc/analysis/2026-05-03-home-content-audit/architecture-mapping-audit.md §gap-5) flagged this shape as the latent migration target. Minimal envelope: this fixture exercises ONLY the modern Codable path on the `Continuation` model — the parent `continuationItemRenderer.continuationEndpoint` wrapper is deliberately collapsed because the implementer is free to attach `continuationCommand` directly on `Continuation` (additive Codable, see ExecPlan §Phase 1 task 1.2).",
+    "continuationCommand": {
+        "token": "TOKEN_MODERN"
+    }
+}

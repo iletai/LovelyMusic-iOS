@@ -1,0 +1,130 @@
+{
+    "_comment": "SOURCE: synthesized to mirror musicShelfRenderer + musicResponsiveListItemRenderer (songs) on home. Pins existing list-shelf mapping behavior.",
+    "contents": {
+        "singleColumnBrowseResultsRenderer": {
+            "tabs": [
+                {
+                    "tabRenderer": {
+                        "content": {
+                            "sectionListRenderer": {
+                                "contents": [
+                                    {
+                                        "musicShelfRenderer": {
+                                            "title": {
+                                                "runs": [
+                                                    {
+                                                        "text": "Listen again"
+                                                    }
+                                                ]
+                                            },
+                                            "contents": [
+                                                {
+                                                    "musicResponsiveListItemRenderer": {
+                                                        "playlistItemData": {
+                                                            "videoId": "songVid001"
+                                                        },
+                                                        "flexColumns": [
+                                                            {
+                                                                "musicResponsiveListItemFlexColumnRenderer": {
+                                                                    "text": {
+                                                                        "runs": [
+                                                                            {
+                                                                                "text": "Song One"
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                }
+                                                            },
+                                                            {
+                                                                "musicResponsiveListItemFlexColumnRenderer": {
+                                                                    "text": {
+                                                                        "runs": [
+                                                                            {
+                                                                                "text": "Artist One",
+                                                                                "navigationEndpoint": {
+                                                                                    "browseEndpoint": {
+                                                                                        "browseId": "UCartist001"
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                }
+                                                            }
+                                                        ],
+                                                        "thumbnail": {
+                                                            "musicThumbnailRenderer": {
+                                                                "thumbnail": {
+                                                                    "thumbnails": [
+                                                                        {
+                                                                            "url": "https://example.invalid/s1.jpg",
+                                                                            "width": 60,
+                                                                            "height": 60
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                {
+                                                    "musicResponsiveListItemRenderer": {
+                                                        "playlistItemData": {
+                                                            "videoId": "songVid002"
+                                                        },
+                                                        "flexColumns": [
+                                                            {
+                                                                "musicResponsiveListItemFlexColumnRenderer": {
+                                                                    "text": {
+                                                                        "runs": [
+                                                                            {
+                                                                                "text": "Song Two"
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                }
+                                                            },
+                                                            {
+                                                                "musicResponsiveListItemFlexColumnRenderer": {
+                                                                    "text": {
+                                                                        "runs": [
+                                                                            {
+                                                                                "text": "Artist Two",
+                                                                                "navigationEndpoint": {
+                                                                                    "browseEndpoint": {
+                                                                                        "browseId": "UCartist002"
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                }
+                                                            }
+                                                        ],
+                                                        "thumbnail": {
+                                                            "musicThumbnailRenderer": {
+                                                                "thumbnail": {
+                                                                    "thumbnails": [
+                                                                        {
+                                                                            "url": "https://example.invalid/s2.jpg",
+                                                                            "width": 60,
+                                                                            "height": 60
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}

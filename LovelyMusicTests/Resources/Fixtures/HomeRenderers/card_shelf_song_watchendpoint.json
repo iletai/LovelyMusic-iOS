@@ -1,0 +1,59 @@
+{
+    "_comment": "SOURCE: synthesized to mirror a musicCardShelfRenderer where the hero is a song (onTap.watchEndpoint.videoId) — no browseEndpoint. Section title MUST come from header.musicCardShelfHeaderBasicRenderer.title per InnerTune YouTube.kt#L106-L121. Today's mapper falls back to 'Untitled' because it reads card.title (omitted here) instead of the header.",
+    "contents": {
+        "singleColumnBrowseResultsRenderer": {
+            "tabs": [
+                {
+                    "tabRenderer": {
+                        "content": {
+                            "sectionListRenderer": {
+                                "contents": [
+                                    {
+                                        "musicCardShelfRenderer": {
+                                            "header": {
+                                                "musicCardShelfHeaderBasicRenderer": {
+                                                    "title": {
+                                                        "runs": [
+                                                            {
+                                                                "text": "Now Playing"
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            },
+                                            "subtitle": {
+                                                "runs": [
+                                                    {
+                                                        "text": "Solo Artist"
+                                                    }
+                                                ]
+                                            },
+                                            "thumbnail": {
+                                                "musicThumbnailRenderer": {
+                                                    "thumbnail": {
+                                                        "thumbnails": [
+                                                            {
+                                                                "url": "https://example.invalid/np.jpg",
+                                                                "width": 480,
+                                                                "height": 480
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            },
+                                            "onTap": {
+                                                "watchEndpoint": {
+                                                    "videoId": "heroVid42"
+                                                }
+                                            }
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}

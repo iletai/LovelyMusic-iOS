@@ -1,0 +1,167 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Bootstrap Project",
+            "type": "shell",
+            "command": "bash",
+            "args": [
+                "-c",
+                "if [ ! -f buildServer.json ]; then echo '🔧 buildServer.json not found, bootstrapping...'; ./scripts/bootstrap.sh; else echo '✅ buildServer.json exists, skipping bootstrap.'; fi"
+            ],
+            "runOptions": {
+                "runOn": "folderOpen"
+            },
+            "presentation": {
+                "reveal": "silent",
+                "panel": "shared",
+                "showReuseMessage": false
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Build & Run on Simulator",
+            "type": "shell",
+            "command": "xcodebuild",
+            "args": [
+                "build",
+                "-project",
+                "LovelyMusic.xcodeproj",
+                "-scheme",
+                "LovelyMusic",
+                "-destination",
+                "platform=iOS Simulator,id=6933142B-99F6-4A5B-A2B8-2B17F97F3105",
+                "-quiet"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal": "silent",
+                "panel": "shared",
+                "showReuseMessage": false
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Build with Log (for Copilot)",
+            "type": "shell",
+            "command": "bash",
+            "args": [
+                "-c",
+                "xcodebuild build -project LovelyMusic.xcodeproj -scheme LovelyMusic -destination 'platform=iOS Simulator,id=6933142B-99F6-4A5B-A2B8-2B17F97F3105' 2>&1 | tee .build-log.txt; exit ${PIPESTATUS[0]}"
+            ],
+            "group": "build",
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared",
+                "showReuseMessage": false
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Build, Install & Launch on Simulator",
+            "type": "shell",
+            "command": "bash",
+            "args": [
+                "-c",
+                "xcodebuild build -project LovelyMusic.xcodeproj -scheme LovelyMusic -destination 'platform=iOS Simulator,id=6933142B-99F6-4A5B-A2B8-2B17F97F3105' -quiet && xcrun simctl boot 6933142B-99F6-4A5B-A2B8-2B17F97F3105 2>/dev/null; open -a Simulator && xcrun simctl launch 6933142B-99F6-4A5B-A2B8-2B17F97F3105 com.lovelymusic.app"
+            ],
+            "group": "build",
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared",
+                "showReuseMessage": false
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Build & Launch for Debug (Terminal)",
+            "type": "shell",
+            "command": "bash",
+            "args": [
+                "-c",
+                "xcodebuild build -project LovelyMusic.xcodeproj -scheme LovelyMusic -destination 'platform=iOS Simulator,id=6933142B-99F6-4A5B-A2B8-2B17F97F3105' 2>&1 | tee .build-log.txt && xcrun simctl boot 6933142B-99F6-4A5B-A2B8-2B17F97F3105 2>/dev/null; open -a Simulator && xcrun simctl launch --terminate-running-process 6933142B-99F6-4A5B-A2B8-2B17F97F3105 com.lovelymusic.app; exit ${PIPESTATUS[0]}"
+            ],
+            "group": "build",
+            "presentation": {
+                "reveal": "always",
+                "panel": "dedicated",
+                "showReuseMessage": false
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Run Unit Tests",
+            "type": "shell",
+            "command": "xcodebuild",
+            "args": [
+                "test",
+                "-project",
+                "LovelyMusic.xcodeproj",
+                "-scheme",
+                "LovelyMusicTests",
+                "-destination",
+                "platform=iOS Simulator,id=6933142B-99F6-4A5B-A2B8-2B17F97F3105",
+                "-quiet"
+            ],
+            "group": "test",
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            },
+            "problemMatcher": []
+        },
+        {
+            "type": "sweetpad",
+            "action": "launch",
+            "label": "sweetpad: launch release",
+            "detail": "Build and launch the app (Release)",
+            "scheme": "LovelyMusic",
+            "configuration": "Release",
+            "isBackground": true,
+            "problemMatcher": [
+                "$sweetpad-watch",
+                "$sweetpad-xcodebuild-default",
+                "$sweetpad-xcbeautify-errors",
+                "$sweetpad-xcbeautify-warnings"
+            ]
+        },
+        {
+            "label": "Tail Simulator Logs (Terminal)",
+            "type": "shell",
+            "command": "xcrun",
+            "args": [
+                "simctl",
+                "spawn",
+                "6933142B-99F6-4A5B-A2B8-2B17F97F3105",
+                "log",
+                "stream",
+                "--level",
+                "debug",
+                "--style",
+                "compact",
+                "--predicate",
+                "subsystem CONTAINS 'com.lovelymusic' OR processImagePath CONTAINS 'LovelyMusic'"
+            ],
+            "isBackground": true,
+            "presentation": {
+                "reveal": "always",
+                "panel": "dedicated",
+                "showReuseMessage": false,
+                "clear": true
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "SweetPad Build + Tail Logs",
+            "dependsOn": [
+                "sweetpad: debugging-launch",
+                "Tail Simulator Logs (Terminal)"
+            ],
+            "dependsOrder": "parallel",
+            "problemMatcher": []
+        }
+    ]
+}

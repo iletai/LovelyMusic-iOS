@@ -1,0 +1,107 @@
+{
+    "_comment": "SOURCE: synthesized to mirror gridRenderer + musicTwoRowItemRenderer (artists, browseId UC*) on home. Pins existing grid mapping behavior.",
+    "contents": {
+        "singleColumnBrowseResultsRenderer": {
+            "tabs": [
+                {
+                    "tabRenderer": {
+                        "content": {
+                            "sectionListRenderer": {
+                                "contents": [
+                                    {
+                                        "gridRenderer": {
+                                            "items": [
+                                                {
+                                                    "musicTwoRowItemRenderer": {
+                                                        "title": {
+                                                            "runs": [
+                                                                {
+                                                                    "text": "Artist Alpha"
+                                                                }
+                                                            ]
+                                                        },
+                                                        "subtitle": {
+                                                            "runs": [
+                                                                {
+                                                                    "text": "Artist"
+                                                                }
+                                                            ]
+                                                        },
+                                                        "thumbnailRenderer": {
+                                                            "musicThumbnailRenderer": {
+                                                                "thumbnail": {
+                                                                    "thumbnails": [
+                                                                        {
+                                                                            "url": "https://example.invalid/a1.jpg",
+                                                                            "width": 226,
+                                                                            "height": 226
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            }
+                                                        },
+                                                        "navigationEndpoint": {
+                                                            "browseEndpoint": {
+                                                                "browseId": "UCalpha000001",
+                                                                "browseEndpointContextSupportedConfigs": {
+                                                                    "browseEndpointContextMusicConfig": {
+                                                                        "pageType": "MUSIC_PAGE_TYPE_ARTIST"
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                {
+                                                    "musicTwoRowItemRenderer": {
+                                                        "title": {
+                                                            "runs": [
+                                                                {
+                                                                    "text": "Artist Beta"
+                                                                }
+                                                            ]
+                                                        },
+                                                        "subtitle": {
+                                                            "runs": [
+                                                                {
+                                                                    "text": "Artist"
+                                                                }
+                                                            ]
+                                                        },
+                                                        "thumbnailRenderer": {
+                                                            "musicThumbnailRenderer": {
+                                                                "thumbnail": {
+                                                                    "thumbnails": [
+                                                                        {
+                                                                            "url": "https://example.invalid/a2.jpg",
+                                                                            "width": 226,
+                                                                            "height": 226
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            }
+                                                        },
+                                                        "navigationEndpoint": {
+                                                            "browseEndpoint": {
+                                                                "browseId": "UCbeta0000002",
+                                                                "browseEndpointContextSupportedConfigs": {
+                                                                    "browseEndpointContextMusicConfig": {
+                                                                        "pageType": "MUSIC_PAGE_TYPE_ARTIST"
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,77 @@
+{
+    "_comment": "Feature 1: musicCarouselShelfRenderer with one musicTwoRowItemRenderer for a UserChannel. pageType = MUSIC_PAGE_TYPE_USER_CHANNEL. Mapper must emit .userChannel(UserChannel{...}).",
+    "contents": {
+        "singleColumnBrowseResultsRenderer": {
+            "tabs": [
+                {
+                    "tabRenderer": {
+                        "content": {
+                            "sectionListRenderer": {
+                                "contents": [
+                                    {
+                                        "musicCarouselShelfRenderer": {
+                                            "header": {
+                                                "musicCarouselShelfBasicHeaderRenderer": {
+                                                    "title": {
+                                                        "runs": [
+                                                            {
+                                                                "text": "Channels you follow"
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            },
+                                            "contents": [
+                                                {
+                                                    "musicTwoRowItemRenderer": {
+                                                        "title": {
+                                                            "runs": [
+                                                                {
+                                                                    "text": "Lo-Fi Beats"
+                                                                }
+                                                            ]
+                                                        },
+                                                        "subtitle": {
+                                                            "runs": [
+                                                                {
+                                                                    "text": ""
+                                                                }
+                                                            ]
+                                                        },
+                                                        "thumbnailRenderer": {
+                                                            "musicThumbnailRenderer": {
+                                                                "thumbnail": {
+                                                                    "thumbnails": [
+                                                                        {
+                                                                            "url": "https://example.invalid/channel_lofi.jpg",
+                                                                            "width": 226,
+                                                                            "height": 226
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            }
+                                                        },
+                                                        "navigationEndpoint": {
+                                                            "browseEndpoint": {
+                                                                "browseId": "UClofi_beats_001",
+                                                                "browseEndpointContextSupportedConfigs": {
+                                                                    "browseEndpointContextMusicConfig": {
+                                                                        "pageType": "MUSIC_PAGE_TYPE_USER_CHANNEL"
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}

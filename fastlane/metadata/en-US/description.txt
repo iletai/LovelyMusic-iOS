@@ -1,0 +1,59 @@
+LovelyMusic is a beautifully crafted offline music player featuring
+a hand-picked library of CC BY 3.0 instrumental tracks composed
+by Kevin MacLeod (incompetech.com) and licensed under Creative
+Commons Attribution 3.0 (CC BY 3.0).
+
+WHAT'S INSIDE
+A curated catalog of 20+ cinematic, ambient, and uplifting tracks
+bundled directly inside the app. No account. No sign-up. No
+external streaming. Open the app and everything is ready to play.
+
+PLAY OFFLINE, ANYWHERE
+All music is stored on your device and plays without an internet
+connection — perfect for flights, commutes, and focused work.
+
+YOUR LISTENING, YOUR WAY
+Build custom playlists, save your favorites, and revisit your
+recent plays. Everything stays on your device — nothing is uploaded
+to any server.
+
+SING ALONG (WHEN AVAILABLE)
+Optional synced lyrics pulled from the public LrcLib community API
+for tracks that have them. Lyrics highlight in real time as the
+music plays.
+
+DRIVE WITH MUSIC
+Full CarPlay support — browse the bundled library and play
+hands-free from your car's dashboard.
+
+DESIGNED FOR YOU
+A clean, minimalist interface with smooth animations, thoughtful
+typography, and native Dark Mode. No clutter — just the music.
+
+OPTIONAL PREMIUM
+Premium is entirely optional and unlocks quality-of-life features
+on top of the bundled library: uninterrupted listening, enhanced audio
+quality, an equalizer, unlimited skips, and refined UI themes.
+Every track is included by default — Premium only enhances the experience.
+
+MUSIC CREDITS
+All music by Kevin MacLeod — incompetech.com — licensed under
+CC BY 3.0 (https://creativecommons.org/licenses/by/3.0/).
+Full attribution, source URLs, and per-track license evidence are
+shown inside the app under Settings → About → Music Credits.
+
+SUBSCRIPTION INFORMATION
+• LovelyMusic Premium Monthly: $4.99/month
+• LovelyMusic Premium Yearly: $29.99/year (save 50%)
+• LovelyMusic Premium Lifetime: $79.99 one-time purchase
+• Payment will be charged to your Apple ID account at confirmation
+  of purchase
+• Subscription automatically renews unless cancelled at least 24
+  hours before the end of the current period
+• Account will be charged for renewal within 24 hours prior to
+  the end of the current period
+• You can manage and cancel your subscriptions by going to your
+  Apple ID account settings after purchase
+
+Terms of Use (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+Privacy Policy: https://www.iletai.qzz.io/policy#privacy-policy

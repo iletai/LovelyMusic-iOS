@@ -1,0 +1,55 @@
+LovelyMusic là trình phát nhạc offline được thiết kế tinh tế, với
+thư viện chọn lọc các bản nhạc không lời CC BY 3.0 do
+Kevin MacLeod sáng tác (incompetech.com) và được cấp phép theo
+Creative Commons Attribution 3.0 (CC BY 3.0).
+
+NỘI DUNG CÓ SẴN
+Bộ sưu tập chọn lọc gồm hơn 20 bản nhạc điện ảnh, ambient và
+tích cực, được đóng gói trực tiếp trong ứng dụng. Không tài khoản,
+không đăng ký, không streaming bên ngoài. Mở ứng dụng là nghe ngay.
+
+NGHE OFFLINE, MỌI NƠI
+Tất cả bản nhạc được lưu trong thiết bị và phát không cần kết nối
+internet — hoàn hảo cho chuyến bay, di chuyển và làm việc tập trung.
+
+THEO CÁCH CỦA BẠN
+Tạo danh sách phát tùy chỉnh, lưu bài hát yêu thích và xem lại
+bài đã nghe gần đây. Mọi dữ liệu đều ở trên thiết bị — không có
+gì được tải lên bất kỳ máy chủ nào.
+
+HÁT THEO LỜI (KHI CÓ)
+Lời bài hát đồng bộ tùy chọn từ API cộng đồng LrcLib cho các bản
+nhạc có sẵn. Lời bài hát sáng lên theo thời gian thực khi nhạc phát.
+
+LÁI XE CÙNG NHẠC
+Hỗ trợ CarPlay đầy đủ — duyệt thư viện và phát nhạc rảnh tay từ
+bảng điều khiển xe.
+
+THIẾT KẾ DÀNH CHO BẠN
+Giao diện tối giản, sạch sẽ với hoạt ảnh mượt mà, typography tinh
+tế và chế độ tối native. Không lộn xộn — chỉ có âm nhạc.
+
+PREMIUM LÀ TÙY CHỌN
+Premium hoàn toàn tùy chọn và mở khóa các tính năng nâng cao trên
+thư viện có sẵn: trải nghiệm liền mạch, chất lượng âm thanh tăng
+cường, equalizer, skip không giới hạn, và chủ đề UI tinh chỉnh.
+Mọi bản nhạc đều có sẵn mặc định — Premium chỉ nâng tầm trải nghiệm.
+
+CREDIT ÂM NHẠC
+Toàn bộ nhạc bởi Kevin MacLeod — incompetech.com — cấp phép theo
+CC BY 3.0 (https://creativecommons.org/licenses/by/3.0/).
+Thông tin attribution đầy đủ, URL nguồn và bằng chứng giấy phép
+cho từng bản nhạc được hiển thị trong ứng dụng tại
+Cài đặt → Giới thiệu → Music Credits.
+
+THÔNG TIN ĐĂNG KÝ
+• LovelyMusic Premium Hàng tháng: $4.99/tháng
+• LovelyMusic Premium Hàng năm: $29.99/năm (tiết kiệm 50%)
+• LovelyMusic Premium Trọn đời: $79.99 (mua một lần)
+• Thanh toán sẽ được tính vào tài khoản Apple ID khi xác nhận mua hàng
+• Đăng ký tự động gia hạn trừ khi được hủy ít nhất 24 giờ trước khi kết thúc kỳ hiện tại
+• Tài khoản sẽ bị tính phí gia hạn trong vòng 24 giờ trước khi kết thúc kỳ hiện tại
+• Bạn có thể quản lý và hủy đăng ký trong phần cài đặt tài khoản Apple ID sau khi mua
+
+Điều khoản sử dụng (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+Chính sách bảo mật: https://www.iletai.qzz.io/policy#privacy-policy

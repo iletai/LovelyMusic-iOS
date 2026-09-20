@@ -1,0 +1,22 @@
+{
+    "swift.path": "",
+    "swift.sourcekit-lsp.serverArguments": [],
+    "swift.outputChannelLogLevel": "debug",
+    "[swift]": {
+        "editor.defaultFormatter": "swiftlang.swift-vscode",
+        "editor.tabSize": 4,
+        "editor.insertSpaces": true,
+        "editor.semanticHighlighting.enabled": true,
+        "editor.quickSuggestions": {
+            "other": true,
+            "comments": false,
+            "strings": false
+        },
+        "editor.suggest.snippetsPreventQuickSuggestions": false,
+        "editor.inlayHints.enabled": "on",
+    },
+    "swift.autoGenerateLaunchConfigurations": false,
+    "chat.tools.terminal.autoApprove": {
+        "tee": true
+    }
+}

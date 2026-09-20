@@ -1,0 +1,132 @@
+{
+    "_comment": "SOURCE: synthesized — full BrowseResponse continuation envelope modeled after chip_filter_continuation_envelope.json, but with the next-page continuation in the modern continuationCommand.token shape (cf. InnerTune HomePage.kt: https://github.com/z-huang/InnerTune/blob/dev/innertube/src/main/java/com/zionhuang/innertube/pages/HomePage.kt). Round-1 audit doc/analysis/2026-05-03-home-content-audit/architecture-mapping-audit.md §gap-5 flagged that BrowseResponseMapper.mapHomeContinuation reads `sectionListCont.continuations?.token` (BrowseResponseMapper.swift L838) which today only resolves to the legacy nextContinuationData.continuation. This fixture exercises the end-to-end loop: sections decode AND the next-page token surfaces from the modern shape. Two minimal carousel sections to mirror chip_filter_continuation_envelope.json.",
+    "continuationContents": {
+        "sectionListContinuation": {
+            "contents": [
+                {
+                    "musicCarouselShelfRenderer": {
+                        "header": {
+                            "musicCarouselShelfBasicHeaderRenderer": {
+                                "title": {
+                                    "runs": [
+                                        {
+                                            "text": "Modern continuation A"
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        "contents": [
+                            {
+                                "musicTwoRowItemRenderer": {
+                                    "title": {
+                                        "runs": [
+                                            {
+                                                "text": "Track A1"
+                                            }
+                                        ]
+                                    },
+                                    "subtitle": {
+                                        "runs": [
+                                            {
+                                                "text": "YouTube Music"
+                                            }
+                                        ]
+                                    },
+                                    "thumbnailRenderer": {
+                                        "musicThumbnailRenderer": {
+                                            "thumbnail": {
+                                                "thumbnails": [
+                                                    {
+                                                        "url": "https://example.invalid/a1.jpg",
+                                                        "width": 226,
+                                                        "height": 226
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    },
+                                    "navigationEndpoint": {
+                                        "browseEndpoint": {
+                                            "browseId": "VLPLmodern0001",
+                                            "browseEndpointContextSupportedConfigs": {
+                                                "browseEndpointContextMusicConfig": {
+                                                    "pageType": "MUSIC_PAGE_TYPE_PLAYLIST"
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "musicCarouselShelfRenderer": {
+                        "header": {
+                            "musicCarouselShelfBasicHeaderRenderer": {
+                                "title": {
+                                    "runs": [
+                                        {
+                                            "text": "Modern continuation B"
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        "contents": [
+                            {
+                                "musicTwoRowItemRenderer": {
+                                    "title": {
+                                        "runs": [
+                                            {
+                                                "text": "Track B1"
+                                            }
+                                        ]
+                                    },
+                                    "subtitle": {
+                                        "runs": [
+                                            {
+                                                "text": "YouTube Music"
+                                            }
+                                        ]
+                                    },
+                                    "thumbnailRenderer": {
+                                        "musicThumbnailRenderer": {
+                                            "thumbnail": {
+                                                "thumbnails": [
+                                                    {
+                                                        "url": "https://example.invalid/b1.jpg",
+                                                        "width": 226,
+                                                        "height": 226
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    },
+                                    "navigationEndpoint": {
+                                        "browseEndpoint": {
+                                            "browseId": "VLPLmodern0002",
+                                            "browseEndpointContextSupportedConfigs": {
+                                                "browseEndpointContextMusicConfig": {
+                                                    "pageType": "MUSIC_PAGE_TYPE_PLAYLIST"
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                }
+            ],
+            "continuations": [
+                {
+                    "continuationCommand": {
+                        "token": "TOKEN_MODERN"
+                    }
+                }
+            ]
+        }
+    }
+}

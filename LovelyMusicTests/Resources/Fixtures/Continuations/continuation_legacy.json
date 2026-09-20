@@ -1,0 +1,6 @@
+{
+    "_comment": "SOURCE: synthesized from YouTube schema documentation + round-1 audit doc/analysis/2026-05-03-home-content-audit/architecture-mapping-audit.md §gap-5 (cites SharedRenderers.swift#L94-L107). Legacy continuation envelope shape — what Home currently returns. Pins the existing GREEN behavior so the implementer's additive changes don't regress legacy decode.",
+    "nextContinuationData": {
+        "continuation": "TOKEN_LEGACY"
+    }
+}

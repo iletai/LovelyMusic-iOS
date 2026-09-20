@@ -1,0 +1,199 @@
+{
+    "_comment": "SOURCE: contrived shape with BOTH `contents.singleColumnBrowseResultsRenderer...sectionListRenderer.contents[]` (1 carousel) AND `continuationContents.sectionListContinuation.contents[]` (2 carousels). Pins the precedence rule for the chip-filter implementer: top-level wins. Audit doc/analysis/2026-05-04-home-chip-filter-empty/audit.md §H2 cites the continuation envelope path used by chip-filtered FEmusic_home + params responses.",
+    "contents": {
+        "singleColumnBrowseResultsRenderer": {
+            "tabs": [
+                {
+                    "tabRenderer": {
+                        "content": {
+                            "sectionListRenderer": {
+                                "contents": [
+                                    {
+                                        "musicCarouselShelfRenderer": {
+                                            "header": {
+                                                "musicCarouselShelfBasicHeaderRenderer": {
+                                                    "title": {
+                                                        "runs": [
+                                                            {
+                                                                "text": "Top-level only"
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            },
+                                            "contents": [
+                                                {
+                                                    "musicTwoRowItemRenderer": {
+                                                        "title": {
+                                                            "runs": [
+                                                                {
+                                                                    "text": "TopLevel Playlist"
+                                                                }
+                                                            ]
+                                                        },
+                                                        "subtitle": {
+                                                            "runs": [
+                                                                {
+                                                                    "text": "YouTube Music"
+                                                                }
+                                                            ]
+                                                        },
+                                                        "thumbnailRenderer": {
+                                                            "musicThumbnailRenderer": {
+                                                                "thumbnail": {
+                                                                    "thumbnails": [
+                                                                        {
+                                                                            "url": "https://example.invalid/top1.jpg",
+                                                                            "width": 226,
+                                                                            "height": 226
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            }
+                                                        },
+                                                        "navigationEndpoint": {
+                                                            "browseEndpoint": {
+                                                                "browseId": "VLPLtop0001",
+                                                                "browseEndpointContextSupportedConfigs": {
+                                                                    "browseEndpointContextMusicConfig": {
+                                                                        "pageType": "MUSIC_PAGE_TYPE_PLAYLIST"
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    "continuationContents": {
+        "sectionListContinuation": {
+            "contents": [
+                {
+                    "musicCarouselShelfRenderer": {
+                        "header": {
+                            "musicCarouselShelfBasicHeaderRenderer": {
+                                "title": {
+                                    "runs": [
+                                        {
+                                            "text": "Continuation A"
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        "contents": [
+                            {
+                                "musicTwoRowItemRenderer": {
+                                    "title": {
+                                        "runs": [
+                                            {
+                                                "text": "Cont A Playlist"
+                                            }
+                                        ]
+                                    },
+                                    "subtitle": {
+                                        "runs": [
+                                            {
+                                                "text": "YouTube Music"
+                                            }
+                                        ]
+                                    },
+                                    "thumbnailRenderer": {
+                                        "musicThumbnailRenderer": {
+                                            "thumbnail": {
+                                                "thumbnails": [
+                                                    {
+                                                        "url": "https://example.invalid/contA.jpg",
+                                                        "width": 226,
+                                                        "height": 226
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    },
+                                    "navigationEndpoint": {
+                                        "browseEndpoint": {
+                                            "browseId": "VLPLcontA0001",
+                                            "browseEndpointContextSupportedConfigs": {
+                                                "browseEndpointContextMusicConfig": {
+                                                    "pageType": "MUSIC_PAGE_TYPE_PLAYLIST"
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "musicCarouselShelfRenderer": {
+                        "header": {
+                            "musicCarouselShelfBasicHeaderRenderer": {
+                                "title": {
+                                    "runs": [
+                                        {
+                                            "text": "Continuation B"
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        "contents": [
+                            {
+                                "musicTwoRowItemRenderer": {
+                                    "title": {
+                                        "runs": [
+                                            {
+                                                "text": "Cont B Playlist"
+                                            }
+                                        ]
+                                    },
+                                    "subtitle": {
+                                        "runs": [
+                                            {
+                                                "text": "YouTube Music"
+                                            }
+                                        ]
+                                    },
+                                    "thumbnailRenderer": {
+                                        "musicThumbnailRenderer": {
+                                            "thumbnail": {
+                                                "thumbnails": [
+                                                    {
+                                                        "url": "https://example.invalid/contB.jpg",
+                                                        "width": 226,
+                                                        "height": 226
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    },
+                                    "navigationEndpoint": {
+                                        "browseEndpoint": {
+                                            "browseId": "VLPLcontB0002",
+                                            "browseEndpointContextSupportedConfigs": {
+                                                "browseEndpointContextMusicConfig": {
+                                                    "pageType": "MUSIC_PAGE_TYPE_PLAYLIST"
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    }
+}

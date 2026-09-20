@@ -1,0 +1,25 @@
+# Exclude all generated doc/ outputs from Copilot context
+# Only INDEX.md and currently-active artifacts should be readable
+doc/analysis/
+doc/review/
+doc/exec-plans/
+doc/stories/
+doc/references/
+doc/design/
+doc/testing/
+doc/deployment/
+doc/design/specs/
+doc/specs/
+doc/adr/
+
+# Currently-active review artifacts (narrow allowlist; widen when new work lands)
+!doc/review/2026-04-22-plan-b-phase4/r1-verify-opus47.md
+!doc/review/2026-04-22-plan-b-phase4/r1-verify-gpt55.md
+!doc/review/2026-04-22-plan-b-phase4/r1-implementation-log.md
+!doc/review/2026-04-25-agent-harness-phase1/review.md
+
+# T2.1 — secrets / local overrides / runtime logs must never be indexed
+.github/copilot/*.local.yaml
+.github/copilot/config.local.yaml
+config.local.yaml
+.github/logs/

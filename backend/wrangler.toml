@@ -1,0 +1,14 @@
+name = "lovelymusic-apns-worker"
+main = "src/index.ts"
+compatibility_date = "2024-02-08"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "lovelymusic-apns-db"
+database_id = "00000000-0000-0000-0000-000000000000"
+
+[vars]
+APNS_KEY_ID = "YOUR_KEY_ID"
+APNS_TEAM_ID = "YOUR_APPLE_TEAM_ID"
+APNS_BUNDLE_ID = "com.lovelymusic.app"
+APNS_IS_PRODUCTION = "false"

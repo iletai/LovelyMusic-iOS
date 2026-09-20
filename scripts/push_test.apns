@@ -1,0 +1,14 @@
+{
+  "Simulator Target Bundle": "com.lovelymusic.app",
+  "aps": {
+    "alert": {
+      "title": "🎵 Bài hát mới từ Sơn Tùng M-TP",
+      "body": "Đã có mặt trên LovelyMusic. Bấm để nghe ngay!"
+    },
+    "badge": 1,
+    "sound": "default",
+    "mutable-content": 1
+  },
+  "media_url": "https://picsum.photos/400/400",
+  "route": "downloads"
+}

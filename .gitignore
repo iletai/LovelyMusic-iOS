@@ -1,0 +1,151 @@
+# Xcode
+#
+# gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
+
+## User settings
+xcuserdata/
+
+## Obj-C/Swift specific
+*.hmap
+
+## App packaging
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+## Playgrounds
+timeline.xctimeline
+playground.xcworkspace
+
+# Swift Package Manager
+#
+# Add this line if you want to avoid checking in source code from Swift Package Manager dependencies.
+# Packages/
+# Package.pins
+# Package.resolved
+# *.xcodeproj
+#
+# Xcode automatically generates this directory with a .xcworkspacedata file and xcuserdata
+# hence it is not needed unless you have added a package configuration file to your project
+# .swiftpm
+
+.build/
+
+# CocoaPods
+#
+# We recommend against adding the Pods directory to your .gitignore. However
+# you should judge for yourself, the pros and cons are mentioned at:
+# https://guides.cocoapods.org/using/using-cocoapods.html#should-i-check-the-pods-directory-into-source-control
+#
+# Pods/
+#
+# Add this line if you want to avoid checking in source code from the Xcode workspace
+# *.xcworkspace
+
+# Carthage
+#
+# Add this line if you want to avoid checking in source code from Carthage dependencies.
+# Carthage/Checkouts
+
+Carthage/Build/
+
+# Environment & Secrets
+.env
+.env.*
+!.env.example
+fastlane/.env*
+**/Secrets.plist
+
+# fastlane
+#
+# It is recommended to not store the screenshots in the git repo.
+# Instead, use fastlane to re-generate the screenshots whenever they are needed.
+# For more information about the recommended setup visit:
+# https://docs.fastlane.tools/best-practices/source-control/#source-control
+
+fastlane/report.xml
+fastlane/Preview.html
+# fastlane/screenshots/**/*.png
+fastlane/test_output
+fastlane/output/
+fastlane/README.md
+
+# Local build & debug artifacts
+.smoke_test_artifacts/
+brief.txt
+
+# Xcode
+*.xcodeproj/project.xcworkspace/
+*.xcodeproj/xcuserdata/
+*.xcworkspace/xcuserdata/
+xcuserdata/
+DerivedData/
+build/
+*.pbxuser
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+*.moved-aside
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# Swift Package Manager
+.build/
+.swiftpm/
+Packages/
+Package.pins
+Package.resolved
+
+# CocoaPods
+Pods/
+
+# OS
+.DS_Store
+*.swp
+*~.nib
+.build-log.txt
+.build_dd/*
+
+.build-hook.log
+.claude/settings.local.json
+
+# BSP (generated per-machine by xcode-build-server)
+buildServer.json
+.env.local
+
+# CodeGraph
+.codegraph/
+
+# Cloudflare Wrangler
+.wrangler/
+
+# AI Tooling & Local Agent Instructions (kept local only)
+.claude/
+.serena/
+.opencodereview/
+.superpowers/
+CLAUDE.md
+AGENTS.md
+CLAUDE_AUDIT_REPORT.md
+
+# Internal Design Drafts & Analysis (kept local only)
+doc/
+design.md
+PRESENTATION_*.md
+docs/analysis/
+docs/design/
+docs/review/
+docs/superpowers/
+docs/deploy/
+docs/force-update/
+docs/comprehensive-audit-report.md
+docs/swiftui-performance-ux-audit.md
+docs/APP_REVIEW_STATEMENT.*
+docs/MUSIC_LICENSE_EVIDENCE.*
+docs/IAP_SUBMISSION_GUIDE.md
+docs/PAYMENT_SETUP.md
+docs/PRIVACY_POLICY_UPDATE.md
+docs/cms-configuration-reference.md
+

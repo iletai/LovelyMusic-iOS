@@ -1,0 +1,5 @@
+• Improved audio streaming stability and faster playback buffering.
+• Enhanced search responsiveness and performance.
+• Added Continue Listening support to pick up right where you left off.
+• CarPlay audio experience and playback queue improvements.
+• General UI refinements, smoother scrolling, and bug fixes.

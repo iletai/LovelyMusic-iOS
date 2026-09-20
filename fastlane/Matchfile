@@ -1,0 +1,16 @@
+# Fastlane Match configuration
+# Docs: https://docs.fastlane.tools/actions/match/
+
+git_url(ENV["MATCH_GIT_URL"] || "git@github.com:your-org/your-certificates-repo.git")
+
+storage_mode("git")
+
+type("appstore")
+
+app_identifier(["com.lovelymusic.app", "com.lovelymusic.app.NotificationService"])
+
+team_id(ENV["APPLE_TEAM_ID"] || "YOUR_TEAM_ID")
+
+# Default read-only for safety. Set MATCH_READONLY=false for bootstrap (create missing profiles).
+# Usage: MATCH_READONLY=false fastlane syncCertsLane  (one-time profile creation)
+readonly(ENV["MATCH_READONLY"] != "false")

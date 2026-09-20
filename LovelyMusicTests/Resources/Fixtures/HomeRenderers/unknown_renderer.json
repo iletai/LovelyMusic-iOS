@@ -1,0 +1,85 @@
+{
+    "_comment": "SOURCE: synthesized. One unknown 'musicMadeUpRenderer' alongside one valid musicCarouselShelfRenderer. Mapper must skip the unknown gracefully (no throw) and still surface the valid section.",
+    "contents": {
+        "singleColumnBrowseResultsRenderer": {
+            "tabs": [
+                {
+                    "tabRenderer": {
+                        "content": {
+                            "sectionListRenderer": {
+                                "contents": [
+                                    {
+                                        "musicMadeUpRenderer": {
+                                            "title": {
+                                                "runs": [
+                                                    {
+                                                        "text": "Future Renderer"
+                                                    }
+                                                ]
+                                            },
+                                            "blob": {
+                                                "x": 1,
+                                                "y": "z"
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "musicCarouselShelfRenderer": {
+                                            "header": {
+                                                "musicCarouselShelfBasicHeaderRenderer": {
+                                                    "title": {
+                                                        "runs": [
+                                                            {
+                                                                "text": "Real section"
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            },
+                                            "contents": [
+                                                {
+                                                    "musicTwoRowItemRenderer": {
+                                                        "title": {
+                                                            "runs": [
+                                                                {
+                                                                    "text": "Item 1"
+                                                                }
+                                                            ]
+                                                        },
+                                                        "thumbnailRenderer": {
+                                                            "musicThumbnailRenderer": {
+                                                                "thumbnail": {
+                                                                    "thumbnails": [
+                                                                        {
+                                                                            "url": "https://example.invalid/u.jpg",
+                                                                            "width": 226,
+                                                                            "height": 226
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            }
+                                                        },
+                                                        "navigationEndpoint": {
+                                                            "browseEndpoint": {
+                                                                "browseId": "VLPLunknown01",
+                                                                "browseEndpointContextSupportedConfigs": {
+                                                                    "browseEndpointContextMusicConfig": {
+                                                                        "pageType": "MUSIC_PAGE_TYPE_PLAYLIST"
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}

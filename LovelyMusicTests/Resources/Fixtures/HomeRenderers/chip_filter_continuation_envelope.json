@@ -1,0 +1,125 @@
+{
+    "_comment": "SOURCE: shape of a chip-filtered FEmusic_home + params response. Top-level `contents` is absent; sections live under `continuationContents.sectionListContinuation.contents[]`. Audit doc/analysis/2026-05-04-home-chip-filter-empty/audit.md §H2 cites BrowseResponseMapper.swift L798-L808 for the existing `mapHomeContinuation` reader. Cross-ref InnerTune HomePage.kt continuation handling: https://github.com/z-huang/InnerTune/blob/main/innertube/src/main/java/com/zionhuang/innertube/pages/HomePage.kt. Two carousel shelves to mirror regression_carousel_playlists.json's section shape.",
+    "continuationContents": {
+        "sectionListContinuation": {
+            "contents": [
+                {
+                    "musicCarouselShelfRenderer": {
+                        "header": {
+                            "musicCarouselShelfBasicHeaderRenderer": {
+                                "title": {
+                                    "runs": [
+                                        {
+                                            "text": "Relax mix"
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        "contents": [
+                            {
+                                "musicTwoRowItemRenderer": {
+                                    "title": {
+                                        "runs": [
+                                            {
+                                                "text": "Sunset Lounge"
+                                            }
+                                        ]
+                                    },
+                                    "subtitle": {
+                                        "runs": [
+                                            {
+                                                "text": "YouTube Music"
+                                            }
+                                        ]
+                                    },
+                                    "thumbnailRenderer": {
+                                        "musicThumbnailRenderer": {
+                                            "thumbnail": {
+                                                "thumbnails": [
+                                                    {
+                                                        "url": "https://example.invalid/relax1.jpg",
+                                                        "width": 226,
+                                                        "height": 226
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    },
+                                    "navigationEndpoint": {
+                                        "browseEndpoint": {
+                                            "browseId": "VLPLrelax0001",
+                                            "browseEndpointContextSupportedConfigs": {
+                                                "browseEndpointContextMusicConfig": {
+                                                    "pageType": "MUSIC_PAGE_TYPE_PLAYLIST"
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "musicCarouselShelfRenderer": {
+                        "header": {
+                            "musicCarouselShelfBasicHeaderRenderer": {
+                                "title": {
+                                    "runs": [
+                                        {
+                                            "text": "Focus instrumentals"
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        "contents": [
+                            {
+                                "musicTwoRowItemRenderer": {
+                                    "title": {
+                                        "runs": [
+                                            {
+                                                "text": "Deep Focus"
+                                            }
+                                        ]
+                                    },
+                                    "subtitle": {
+                                        "runs": [
+                                            {
+                                                "text": "YouTube Music"
+                                            }
+                                        ]
+                                    },
+                                    "thumbnailRenderer": {
+                                        "musicThumbnailRenderer": {
+                                            "thumbnail": {
+                                                "thumbnails": [
+                                                    {
+                                                        "url": "https://example.invalid/focus1.jpg",
+                                                        "width": 226,
+                                                        "height": 226
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    },
+                                    "navigationEndpoint": {
+                                        "browseEndpoint": {
+                                            "browseId": "VLPLfocus0002",
+                                            "browseEndpointContextSupportedConfigs": {
+                                                "browseEndpointContextMusicConfig": {
+                                                    "pageType": "MUSIC_PAGE_TYPE_PLAYLIST"
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    }
+}

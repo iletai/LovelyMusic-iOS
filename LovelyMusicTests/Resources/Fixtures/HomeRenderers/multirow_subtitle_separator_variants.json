@@ -1,0 +1,80 @@
+{
+    "_comment": "SOURCE: synthesized to pin the round-3 LOW finding (joinSameFieldRuns separator-set robustness). Subtitle uses an em-dash field separator (' — ', U+2014 with regular U+0020 spaces) between the artist run and the next field. YouTube emits em-dash, en-dash, and NBSP-bracketed bullet variants; today joinSameFieldRuns recognizes only [' • ', ' · ', '•', '·'] so this fixture leaks 'Beyoncé, Pop, 2024' (or similar) into artistName instead of 'Beyoncé'. Used as the anchor file for testMultiRowItem_subtitleWithVariedSeparators_treatsAllAsFieldChange; the other 4 separator variants are exercised inline via a JSON template in the test.",
+    "contents": {
+        "singleColumnBrowseResultsRenderer": {
+            "tabs": [
+                {
+                    "tabRenderer": {
+                        "content": {
+                            "sectionListRenderer": {
+                                "contents": [
+                                    {
+                                        "musicShelfRenderer": {
+                                            "title": {
+                                                "runs": [
+                                                    {
+                                                        "text": "Quick picks"
+                                                    }
+                                                ]
+                                            },
+                                            "contents": [
+                                                {
+                                                    "musicMultiRowListItemRenderer": {
+                                                        "title": {
+                                                            "runs": [
+                                                                {
+                                                                    "text": "Texas Hold 'Em"
+                                                                }
+                                                            ]
+                                                        },
+                                                        "subtitle": {
+                                                            "runs": [
+                                                                {
+                                                                    "text": "Beyoncé"
+                                                                },
+                                                                {
+                                                                    "text": " \u2014 "
+                                                                },
+                                                                {
+                                                                    "text": "Pop"
+                                                                },
+                                                                {
+                                                                    "text": " • "
+                                                                },
+                                                                {
+                                                                    "text": "2024"
+                                                                }
+                                                            ]
+                                                        },
+                                                        "thumbnail": {
+                                                            "musicThumbnailRenderer": {
+                                                                "thumbnail": {
+                                                                    "thumbnails": [
+                                                                        {
+                                                                            "url": "https://example.invalid/sepvar.jpg",
+                                                                            "width": 60,
+                                                                            "height": 60
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            }
+                                                        },
+                                                        "onTap": {
+                                                            "watchEndpoint": {
+                                                                "videoId": "sepvar0001"
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}

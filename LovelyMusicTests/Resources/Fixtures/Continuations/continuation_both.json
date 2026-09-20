@@ -1,0 +1,9 @@
+{
+    "_comment": "SOURCE: synthesized to pin precedence rule. Per ExecPlan Q5 (Phase 1 Kickoff — APPROVED) and round-1 audit doc/analysis/2026-05-03-home-content-audit/architecture-mapping-audit.md §gap-5: when YouTube serves both shapes during migration, MODERN must win because it represents the migration direction. Legacy is the fallback path for endpoints that have not yet migrated.",
+    "nextContinuationData": {
+        "continuation": "OLD"
+    },
+    "continuationCommand": {
+        "token": "NEW"
+    }
+}

@@ -1,0 +1,215 @@
+name: CD — Deploy to TestFlight
+
+on:
+  push:
+    tags:
+      - "v*"
+  workflow_dispatch:
+    inputs:
+      version_bump:
+        description: "Version bump type (ignored if tag trigger)"
+        required: false
+        default: "none"
+        type: choice
+        options:
+          - none
+          - patch
+          - minor
+          - major
+
+concurrency:
+  group: cd-testflight
+  cancel-in-progress: false
+
+env:
+  XCODE_VERSION: "26.2"
+  PROJECT: "LovelyMusic.xcodeproj"
+  SCHEME: "LovelyMusic"
+  BUNDLE_ID: "com.lovelymusic.app"
+
+jobs:
+  deploy:
+    name: Build & Upload to TestFlight
+    runs-on: macos-latest
+    timeout-minutes: 60
+
+    permissions:
+      contents: write
+
+    steps:
+      # ── Checkout ──────────────────────────────────────────────
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # ── Environment Setup ────────────────────────────────────
+      - name: Select Xcode
+        run: sudo xcode-select -s /Applications/Xcode_${{ env.XCODE_VERSION }}.app/Contents/Developer
+
+      - name: Install XcodeGen
+        run: HOMEBREW_NO_AUTO_UPDATE=1 brew install xcodegen
+
+      - name: Generate Xcode project
+        run: xcodegen generate
+
+      - name: Decode Secrets.plist
+        env:
+          SECRETS_PLIST_BASE64: ${{ secrets.SECRETS_PLIST_BASE64 }}
+        run: |
+          if [ -n "$SECRETS_PLIST_BASE64" ]; then
+            echo "$SECRETS_PLIST_BASE64" | base64 --decode > LovelyMusic/Resources/Secrets.plist
+          else
+            echo "Error: SECRETS_PLIST_BASE64 is required for release builds"
+            exit 1
+          fi
+
+      - name: Setup Ruby & Bundler
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.2"
+          bundler-cache: true
+
+      # ── Cache ────────────────────────────────────────────────
+      - name: Cache SPM dependencies
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/Library/Caches/org.swift.swiftpm
+            ~/Library/Developer/Xcode/DerivedData/**/SourcePackages
+            fastlane/swift/.build
+          key: spm-${{ runner.os }}-${{ hashFiles('project.yml', 'Package.resolved', 'fastlane/swift/Package.resolved') }}
+          restore-keys: |
+            spm-${{ runner.os }}-
+
+      # ── Code Signing (Fastlane Match) ────────────────────────
+      - name: Setup SSH for Match
+        uses: webfactory/ssh-agent@v0.9.0
+        with:
+          ssh-private-key: ${{ secrets.MATCH_DEPLOY_KEY }}
+
+      - name: Setup temporary Keychain
+        run: |
+          KEYCHAIN_PATH="$RUNNER_TEMP/fastlane_tmp.keychain-db"
+          KEYCHAIN_PASSWORD="${{ secrets.KEYCHAIN_PASSWORD || 'ci_keychain_temp_password' }}"
+          security create-keychain -p "$KEYCHAIN_PASSWORD" "$KEYCHAIN_PATH"
+          security set-keychain-settings -lut 21600 "$KEYCHAIN_PATH"
+          security unlock-keychain -p "$KEYCHAIN_PASSWORD" "$KEYCHAIN_PATH"
+          security list-keychains -d user -s "$KEYCHAIN_PATH" $(security list-keychains -d user | tr -d '"')
+          echo "KEYCHAIN_PATH=$KEYCHAIN_PATH" >> "$GITHUB_ENV"
+          echo "KEYCHAIN_PASSWORD=$KEYCHAIN_PASSWORD" >> "$GITHUB_ENV"
+          echo "MATCH_KEYCHAIN_NAME=$KEYCHAIN_PATH" >> "$GITHUB_ENV"
+          echo "MATCH_KEYCHAIN_PASSWORD=$KEYCHAIN_PASSWORD" >> "$GITHUB_ENV"
+
+      # ── Set Build Number ─────────────────────────────────────
+      - name: Set build number
+        run: |
+          BUILD_NUMBER=${{ github.run_number }}
+          echo "BUILD_NUMBER=$BUILD_NUMBER" >> "$GITHUB_ENV"
+          echo "Build number: $BUILD_NUMBER"
+
+      # ── Extract version from tag ─────────────────────────────
+      - name: Extract version from tag
+        if: startsWith(github.ref, 'refs/tags/v')
+        run: |
+          VERSION="${GITHUB_REF#refs/tags/v}"
+          echo "APP_VERSION=$VERSION" >> "$GITHUB_ENV"
+          echo "Version from tag: $VERSION"
+
+      # ── Bump version (manual dispatch) ───────────────────────
+      - name: Bump version from dispatch input
+        if: >-
+          github.event_name == 'workflow_dispatch' &&
+          github.event.inputs.version_bump != 'none'
+        run: |
+          CURRENT=$(grep 'MARKETING_VERSION' project.yml | head -1 | sed 's/.*"\(.*\)"/\1/')
+          IFS='.' read -r MAJOR MINOR PATCH <<< "$CURRENT"
+
+          case "${{ github.event.inputs.version_bump }}" in
+            major) MAJOR=$((MAJOR + 1)); MINOR=0; PATCH=0 ;;
+            minor) MINOR=$((MINOR + 1)); PATCH=0 ;;
+            patch) PATCH=$((PATCH + 1)) ;;
+          esac
+
+          VERSION="${MAJOR}.${MINOR}.${PATCH}"
+          echo "APP_VERSION=$VERSION" >> "$GITHUB_ENV"
+          echo "Bumped version: $CURRENT → $VERSION (${{ github.event.inputs.version_bump }})"
+
+      # ── Build Swift Fastlane Runner ──────────────────────────
+      - name: Build Fastlane Swift runner
+        run: |
+          cd fastlane/swift
+          swift build -c release 2>&1
+          echo "FASTLANE_RUNNER=$(pwd)/.build/release/fastlaneRunner" >> "$GITHUB_ENV"
+
+      # ── Enable App ID Capabilities ───────────────────────────
+      - name: Ensure App ID capabilities
+        env:
+          APP_STORE_CONNECT_API_KEY_ID: ${{ secrets.APP_STORE_CONNECT_API_KEY_ID }}
+          APP_STORE_CONNECT_API_ISSUER_ID: ${{ secrets.APP_STORE_CONNECT_API_ISSUER_ID }}
+          APP_STORE_CONNECT_API_KEY_CONTENT: ${{ secrets.APP_STORE_CONNECT_API_KEY_CONTENT }}
+        run: |
+          bundle exec ruby fastlane/enable_capabilities.rb
+
+      # ── Diagnostics ─────────────────────────────────────────
+      - name: Verify build environment
+        if: runner.debug == '1'
+        run: |
+          echo "=== Xcode version ==="
+          xcodebuild -version
+          echo "=== Installed SDKs ==="
+          xcodebuild -showsdks | grep -i iphone
+          echo "=== xcbeautify ==="
+          which xcbeautify && xcbeautify --version || echo "xcbeautify NOT found"
+          echo "=== SUPPORTED_PLATFORMS ==="
+          xcodebuild -showBuildSettings -project LovelyMusic.xcodeproj -scheme LovelyMusic -configuration Release 2>/dev/null | grep -E "SUPPORTED_PLATFORMS|SDKROOT" || echo "Failed to get build settings"
+          echo "=== Scheme list ==="
+          xcodebuild -list -project LovelyMusic.xcodeproj 2>/dev/null | head -20
+
+      # ── Build & Deploy ───────────────────────────────────────
+      - name: Build and upload to TestFlight
+        env:
+          MATCH_GIT_URL: ${{ secrets.MATCH_GIT_URL }}
+          MATCH_PASSWORD: ${{ secrets.MATCH_PASSWORD }}
+          MATCH_READONLY: "false"
+          MATCH_FORCE: "true"
+          MATCH_KEYCHAIN_NAME: ${{ env.KEYCHAIN_PATH }}
+          MATCH_KEYCHAIN_PASSWORD: ${{ env.KEYCHAIN_PASSWORD }}
+          APP_STORE_CONNECT_API_KEY_ID: ${{ secrets.APP_STORE_CONNECT_API_KEY_ID }}
+          APP_STORE_CONNECT_API_ISSUER_ID: ${{ secrets.APP_STORE_CONNECT_API_ISSUER_ID }}
+          APP_STORE_CONNECT_API_KEY_CONTENT: ${{ secrets.APP_STORE_CONNECT_API_KEY_CONTENT }}
+          APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
+          KEYCHAIN_PATH: ${{ env.KEYCHAIN_PATH }}
+          KEYCHAIN_PASSWORD: ${{ env.KEYCHAIN_PASSWORD }}
+        run: |
+          export MATCH_READONLY=false
+          $FASTLANE_RUNNER lane beta 2>&1 | tee /tmp/fastlane_output.log
+          EXIT_CODE=${PIPESTATUS[0]}
+          # Swift runner may exit 0 on failure — verify build + upload
+          if [ $EXIT_CODE -ne 0 ]; then
+            echo "::error::Fastlane runner exited with code $EXIT_CODE"
+            exit $EXIT_CODE
+          fi
+          if ! ls fastlane/output/*.ipa 1>/dev/null 2>&1; then
+            echo "::error::No IPA file found — build likely failed. Check archive logs above."
+            exit 1
+          fi
+          if grep -q "Encountered a problem" /tmp/fastlane_output.log; then
+            echo "::error::Fastlane encountered a problem during execution. Check logs above."
+            grep "Encountered a problem" /tmp/fastlane_output.log
+            exit 1
+          fi
+          echo "✅ IPA found: $(ls fastlane/output/*.ipa)"
+
+      # ── Cleanup ──────────────────────────────────────────────
+      - name: Cleanup Keychain
+        if: always()
+        run: |
+          security delete-keychain "$KEYCHAIN_PATH" 2>/dev/null || true
+
+      # ── GitHub Release ───────────────────────────────────────
+      - name: Create GitHub Release
+        if: startsWith(github.ref, 'refs/tags/v')
+        uses: softprops/action-gh-release@v2
+        with:
+          generate_release_notes: true
+          files: |
+            fastlane/output/*.ipa

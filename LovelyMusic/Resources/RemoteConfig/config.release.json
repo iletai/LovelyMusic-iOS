@@ -1,0 +1,116 @@
+{
+  "$schema_version": 1,
+  "toggles": {
+    "download_enabled": false,
+    "youtube_auth_enabled": false,
+    "video_playback_enabled": true,
+    "dev_mode_enabled": false,
+    "appearance_settings_enabled": true,
+    "review_mode_enabled": true,
+    "home_continuation_drain_enabled": false
+  },
+  "monetization": {
+    "free_skip_limit": 6,
+    "free_download_limit": 5,
+    "premium_enabled": true,
+    "lifetime_enabled": true,
+    "ads_enabled": false,
+    "ads_skip_frequency": 4,
+    "ads_section_interval": 3,
+    "ads_song_interval": 10,
+    "terms_of_service_url": "",
+    "privacy_policy_url": ""
+  },
+  "audio": {
+    "bitrate_low": 64000,
+    "bitrate_medium": 128000,
+    "bitrate_high": 256000
+  },
+  "animations": {
+    "bouncy_response": 0.3,
+    "bouncy_damping": 0.6,
+    "smooth_response": 0.4,
+    "smooth_damping": 0.8,
+    "player_response": 0.5,
+    "player_damping": 0.85,
+    "gentle_duration": 0.25,
+    "crossfade_duration": 0.3
+  },
+  "ui": {
+    "home_mood_carousel_height": 110,
+    "home_mood_item_width": 180,
+    "home_mood_grid_row_height": 48,
+    "scroll_fast_fade_during_fling": true,
+    "scroll_shimmer_timeout_enabled": true
+  },
+  "update": {
+    "min_required_version": "1.0.9",
+    "recommended_version": "1.0.9",
+    "force_update_message": "It's update time. We had release new version.",
+    "app_store_url": "https://apps.apple.com/us/app/lovelys-music/id6761626613",
+    "update_changelog": "Update"
+  },
+  "playback_range": {
+    "range_streaming_v1": false,
+    "range_streaming_cohort_percent": 0,
+    "bounded_preload_v1": false,
+    "range_streaming_kill_switch": false,
+    "range_streaming_kill_switch_epoch": 0,
+    "range_loader_policy_version": 1,
+    "range_header_schema_version": 1
+  },
+  "editorial": {
+    "is_enabled": true,
+    "featured_playlists": [
+      {
+        "id": "editorial_top_vn",
+        "title": "Top 50 Vietnam 🇻🇳",
+        "subtitle": "Bảng xếp hạng âm nhạc thịnh hành nhất Việt Nam",
+        "playlist_id": "PL4fGSI1pDJn5kI81J1fYWK5eZRl1zJ5kM",
+        "thumbnail_url": "",
+        "badge_text": "TRENDING #1"
+      },
+      {
+        "id": "editorial_top_hits",
+        "title": "Today's Top Hits 🌟",
+        "subtitle": "The biggest international hits right now",
+        "playlist_id": "PLFgquLnL59alGJcdc0BEZJb2p7IgkL0Wu",
+        "thumbnail_url": "",
+        "badge_text": "GLOBAL HITS"
+      },
+      {
+        "id": "editorial_lofi_focus",
+        "title": "Deep Focus Lofi ☕️",
+        "subtitle": "Chill beats to study, code and relax",
+        "playlist_id": "PLDIS8bgpb6FkU5v_bX04V4uM_D262e3d-",
+        "thumbnail_url": "",
+        "badge_text": "FOCUS"
+      }
+    ]
+  },
+  "announcements": [],
+  "seasonal_theme": {
+    "is_enabled": false,
+    "theme_name": "christmas",
+    "accent_color_light": "#DC2626",
+    "accent_color_dark": "#FF4D4D",
+    "background_gradient_light": ["#FEF2F2", "#F0FDF4"],
+    "background_gradient_dark": ["#1A0B0B", "#0B150B"],
+    "card_gradient_light": ["#FEE2E2", "#DCFCE7"],
+    "card_gradient_dark": ["#2D0F0F", "#0F2D14"],
+    "banner_title": "Merry Christmas & Happy Holidays 🎄",
+    "banner_subtitle": "Cozy tunes for the winter season",
+    "banner_image_url": "",
+    "show_ambient_particles": true,
+    "particle_duration_seconds": 15,
+    "particle_speed_multiplier": 0.8,
+    "particle_count": 22
+  },
+  "paywall_promo": {
+    "is_enabled": false,
+    "badge_text": "",
+    "headline": "",
+    "subheadline": "",
+    "highlighted_product_id": ""
+  }
+}

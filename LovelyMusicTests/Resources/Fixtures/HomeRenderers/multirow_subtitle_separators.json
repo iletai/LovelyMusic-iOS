@@ -1,0 +1,80 @@
+{
+    "_comment": "SOURCE: synthesized to mirror real YouTube Music subtitle runs that interleave artist/genre/year with literal separator runs (' • '). Cf. AGENTS.md §Runs Text Parsing oddElements pattern (artists at even indices). Today's mapper concatenates ALL runs via Runs.text, leaking ' • ' into artistName.",
+    "contents": {
+        "singleColumnBrowseResultsRenderer": {
+            "tabs": [
+                {
+                    "tabRenderer": {
+                        "content": {
+                            "sectionListRenderer": {
+                                "contents": [
+                                    {
+                                        "musicShelfRenderer": {
+                                            "title": {
+                                                "runs": [
+                                                    {
+                                                        "text": "Quick picks"
+                                                    }
+                                                ]
+                                            },
+                                            "contents": [
+                                                {
+                                                    "musicMultiRowListItemRenderer": {
+                                                        "title": {
+                                                            "runs": [
+                                                                {
+                                                                    "text": "Texas Hold 'Em"
+                                                                }
+                                                            ]
+                                                        },
+                                                        "subtitle": {
+                                                            "runs": [
+                                                                {
+                                                                    "text": "Beyoncé"
+                                                                },
+                                                                {
+                                                                    "text": " • "
+                                                                },
+                                                                {
+                                                                    "text": "Pop"
+                                                                },
+                                                                {
+                                                                    "text": " • "
+                                                                },
+                                                                {
+                                                                    "text": "2024"
+                                                                }
+                                                            ]
+                                                        },
+                                                        "thumbnail": {
+                                                            "musicThumbnailRenderer": {
+                                                                "thumbnail": {
+                                                                    "thumbnails": [
+                                                                        {
+                                                                            "url": "https://example.invalid/sep1.jpg",
+                                                                            "width": 60,
+                                                                            "height": 60
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            }
+                                                        },
+                                                        "onTap": {
+                                                            "watchEndpoint": {
+                                                                "videoId": "sep0000001"
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}

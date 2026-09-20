@@ -1,0 +1,99 @@
+name: CD — Release to App Store
+
+on:
+  workflow_dispatch:
+    inputs:
+      action:
+        description: "What to do"
+        required: true
+        default: "metadata_only"
+        type: choice
+        options:
+          - metadata_only
+          - submit_for_review
+
+concurrency:
+  group: cd-release
+  cancel-in-progress: false
+
+env:
+  XCODE_VERSION: "26.2"
+
+jobs:
+  release:
+    name: Upload Metadata & Submit
+    runs-on: macos-latest
+    timeout-minutes: 30
+
+    steps:
+      # ── Checkout ──────────────────────────────────────────────
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # ── Environment Setup ────────────────────────────────────
+      - name: Select Xcode
+        run: sudo xcode-select -s /Applications/Xcode_${{ env.XCODE_VERSION }}.app/Contents/Developer
+
+      - name: Setup Ruby & Bundler
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.2"
+          bundler-cache: true
+
+      # ── Cache ────────────────────────────────────────────────
+      - name: Cache SPM dependencies (Fastlane Swift)
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/Library/Caches/org.swift.swiftpm
+            fastlane/swift/.build
+          key: spm-${{ runner.os }}-${{ hashFiles('project.yml', 'Package.resolved', 'fastlane/swift/Package.resolved') }}
+          restore-keys: |
+            spm-${{ runner.os }}-
+
+      # ── Build Swift Fastlane Runner ──────────────────────────
+      - name: Build Fastlane Swift runner
+        run: |
+          cd fastlane/swift
+          swift build -c release 2>&1
+          echo "FASTLANE_RUNNER=$(pwd)/.build/release/fastlaneRunner" >> "$GITHUB_ENV"
+
+      # ── Upload Metadata Only ─────────────────────────────────
+      - name: Upload metadata to App Store Connect
+        if: github.event.inputs.action == 'metadata_only'
+        env:
+          APP_STORE_CONNECT_API_KEY_ID: ${{ secrets.APP_STORE_CONNECT_API_KEY_ID }}
+          APP_STORE_CONNECT_API_ISSUER_ID: ${{ secrets.APP_STORE_CONNECT_API_ISSUER_ID }}
+          APP_STORE_CONNECT_API_KEY_CONTENT: ${{ secrets.APP_STORE_CONNECT_API_KEY_CONTENT }}
+        run: |
+          $FASTLANE_RUNNER lane metadata 2>&1 | tee /tmp/fastlane_output.log
+          EXIT_CODE=${PIPESTATUS[0]}
+          if [ $EXIT_CODE -ne 0 ]; then
+            echo "::error::Fastlane metadata lane failed with exit code $EXIT_CODE"
+            exit $EXIT_CODE
+          fi
+          if grep -q "Encountered a problem" /tmp/fastlane_output.log; then
+            echo "::error::Fastlane encountered a problem. Check logs above."
+            exit 1
+          fi
+          echo "✅ Metadata uploaded successfully"
+
+      # ── Submit for Review ────────────────────────────────────
+      - name: Upload metadata + screenshots & submit for review
+        if: github.event.inputs.action == 'submit_for_review'
+        env:
+          APP_STORE_CONNECT_API_KEY_ID: ${{ secrets.APP_STORE_CONNECT_API_KEY_ID }}
+          APP_STORE_CONNECT_API_ISSUER_ID: ${{ secrets.APP_STORE_CONNECT_API_ISSUER_ID }}
+          APP_STORE_CONNECT_API_KEY_CONTENT: ${{ secrets.APP_STORE_CONNECT_API_KEY_CONTENT }}
+        run: |
+          $FASTLANE_RUNNER lane release 2>&1 | tee /tmp/fastlane_output.log
+          EXIT_CODE=${PIPESTATUS[0]}
+          if [ $EXIT_CODE -ne 0 ]; then
+            echo "::error::Fastlane release lane failed with exit code $EXIT_CODE"
+            exit $EXIT_CODE
+          fi
+          if grep -q "Encountered a problem" /tmp/fastlane_output.log; then
+            echo "::error::Fastlane encountered a problem. Check logs above."
+            exit 1
+          fi
+          echo "✅ App submitted for review successfully"

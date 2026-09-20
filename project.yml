@@ -1,0 +1,202 @@
+name: LovelyMusic
+options:
+  bundleIdPrefix: com.lovelymusic
+  deploymentTarget:
+    iOS: "18.0"
+  xcodeVersion: "16.0"
+  generateEmptyDirectories: true
+  groupSortPosition: top
+  developmentLanguage: en
+
+configs:
+  Debug: debug
+  Staging: release
+  Release: release
+
+settings:
+  base:
+    SWIFT_VERSION: "5.9"
+    DEVELOPMENT_TEAM: "$(DEVELOPMENT_TEAM)"
+    TARGETED_DEVICE_FAMILY: "1"
+  configs:
+    Debug:
+      SWIFT_ACTIVE_COMPILATION_CONDITIONS: "DEBUG"
+    Staging:
+      SWIFT_ACTIVE_COMPILATION_CONDITIONS: "STAGING"
+    Release:
+      SWIFT_ACTIVE_COMPILATION_CONDITIONS: ""
+
+packages:
+  Nuke:
+    url: https://github.com/kean/Nuke.git
+    from: "12.8.0"
+  GoogleMobileAds:
+    url: https://github.com/googleads/swift-package-manager-google-mobile-ads.git
+    from: "12.2.0"
+
+schemes:
+  LovelyMusic:
+    build:
+      targets:
+        LovelyMusic: all
+    run:
+      config: Debug
+      storeKitConfiguration: LovelyMusic/Resources/LovelyMusic.storekit
+    test:
+      config: Debug
+      targets:
+        - LovelyMusicTests
+    profile:
+      config: Release
+    analyze:
+      config: Debug
+    archive:
+      config: Release
+
+  LovelyMusic-Staging:
+    build:
+      targets:
+        LovelyMusic: all
+    run:
+      config: Staging
+    test:
+      config: Staging
+      targets:
+        - LovelyMusicTests
+    profile:
+      config: Staging
+    analyze:
+      config: Staging
+    archive:
+      config: Staging
+
+  LovelyMusicTests:
+    build:
+      targets:
+        LovelyMusic: all
+        LovelyMusicTests: [test]
+    run:
+      config: Debug
+    test:
+      config: Debug
+      targets:
+        - LovelyMusicTests
+
+  LovelyMusicUITests:
+    build:
+      targets:
+        LovelyMusic: all
+        LovelyMusicUITests: [test]
+    run:
+      config: Debug
+    test:
+      config: Debug
+      targets:
+        - LovelyMusicUITests
+
+targets:
+  LovelyMusic:
+    type: application
+    platform: iOS
+    sources:
+      - path: LovelyMusic
+    dependencies:
+      - package: Nuke
+        product: NukeUI
+      - package: GoogleMobileAds
+      - framework: CarPlay.framework
+        embed: false
+      - target: LovelyMusicNotificationService
+    entitlements:
+      path: LovelyMusic/Resources/LovelyMusic.entitlements
+      properties:
+        aps-environment: $(APS_ENVIRONMENT)
+        com.apple.developer.ubiquity-kvstore-identifier: $(TeamIdentifierPrefix)$(CFBundleIdentifier)
+        com.apple.developer.carplay-audio: true
+    settings:
+      base:
+        INFOPLIST_FILE: LovelyMusic/Resources/Info.plist
+        PRODUCT_BUNDLE_IDENTIFIER: com.lovelymusic.app
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        CODE_SIGN_STYLE: Automatic
+        SWIFT_EMIT_LOC_STRINGS: "YES"
+        MARKETING_VERSION: "1.1.2"
+        CURRENT_PROJECT_VERSION: "7"
+        TARGETED_DEVICE_FAMILY: "1"
+        APS_ENVIRONMENT: development
+        PROVISIONING_PROFILE_SPECIFIER: $(APP_PROVISIONING_PROFILE_SPECIFIER)
+      configs:
+        Staging:
+          APS_ENVIRONMENT: development
+          PRODUCT_NAME: "LovelyMusic (Staging)"
+        Release:
+          APS_ENVIRONMENT: production
+    info:
+      path: LovelyMusic/Resources/Info.plist
+      properties:
+        CFBundleDisplayName: LovelyMusic
+        CFBundleShortVersionString: $(MARKETING_VERSION)
+        CFBundleVersion: $(CURRENT_PROJECT_VERSION)
+        CFBundleLocalizations:
+          - en
+          - ja
+          - vi
+        UILaunchScreen:
+          BackgroundColor: LaunchBackground
+          ImageName: LaunchLogo
+        UIBackgroundModes:
+          - audio
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationPortrait
+          - UIInterfaceOrientationLandscapeLeft
+          - UIInterfaceOrientationLandscapeRight
+
+        UIApplicationSceneManifest:
+          UIApplicationSupportsMultipleScenes: true
+          UISceneConfigurations:
+            CPTemplateApplicationSceneSessionRoleApplication:
+              - UISceneConfigurationName: CarPlay
+                UISceneDelegateClassName: $(PRODUCT_MODULE_NAME).CarPlaySceneDelegate
+        ITSAppUsesNonExemptEncryption: false
+        GADApplicationIdentifier: ca-app-pub-3940256099942544~1458002511
+        SKAdNetworkItems:
+          - SKAdNetworkIdentifier: cstr6suwn9.skadnetwork
+
+  LovelyMusicTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources:
+      - path: LovelyMusicTests
+    dependencies:
+      - target: LovelyMusic
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.lovelymusic.tests
+        GENERATE_INFOPLIST_FILE: YES
+
+  LovelyMusicUITests:
+    type: bundle.ui-testing
+    platform: iOS
+    sources:
+      - path: LovelyMusicUITests
+    dependencies:
+      - target: LovelyMusic
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.lovelymusic.uitests
+        GENERATE_INFOPLIST_FILE: YES
+
+  LovelyMusicNotificationService:
+    type: app-extension
+    platform: iOS
+    sources:
+      - path: LovelyMusicNotificationService
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.lovelymusic.app.NotificationService
+        INFOPLIST_FILE: LovelyMusicNotificationService/Info.plist
+        SWIFT_VERSION: "5.9"
+        MARKETING_VERSION: "1.1.2"
+        CURRENT_PROJECT_VERSION: "7"
+        TARGETED_DEVICE_FAMILY: "1"
+        PROVISIONING_PROFILE_SPECIFIER: $(EXT_PROVISIONING_PROFILE_SPECIFIER)

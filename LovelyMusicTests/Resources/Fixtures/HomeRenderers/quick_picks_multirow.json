@@ -1,0 +1,104 @@
+{
+    "_comment": "SOURCE: synthesized from YouTube Music Home 'Quick picks' shape (FEmusic_home). Each item is a musicMultiRowListItemRenderer wrapped in musicShelfRenderer.contents. Today's mapper drops them silently because it only handles musicResponsiveListItemRenderer inside shelves.",
+    "contents": {
+        "singleColumnBrowseResultsRenderer": {
+            "tabs": [
+                {
+                    "tabRenderer": {
+                        "content": {
+                            "sectionListRenderer": {
+                                "contents": [
+                                    {
+                                        "musicShelfRenderer": {
+                                            "title": {
+                                                "runs": [
+                                                    {
+                                                        "text": "Quick picks"
+                                                    }
+                                                ]
+                                            },
+                                            "contents": [
+                                                {
+                                                    "musicMultiRowListItemRenderer": {
+                                                        "title": {
+                                                            "runs": [
+                                                                {
+                                                                    "text": "Pick One"
+                                                                }
+                                                            ]
+                                                        },
+                                                        "subtitle": {
+                                                            "runs": [
+                                                                {
+                                                                    "text": "Artist A"
+                                                                }
+                                                            ]
+                                                        },
+                                                        "thumbnail": {
+                                                            "musicThumbnailRenderer": {
+                                                                "thumbnail": {
+                                                                    "thumbnails": [
+                                                                        {
+                                                                            "url": "https://example.invalid/thumb1.jpg",
+                                                                            "width": 60,
+                                                                            "height": 60
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            }
+                                                        },
+                                                        "onTap": {
+                                                            "watchEndpoint": {
+                                                                "videoId": "qp00000001"
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                {
+                                                    "musicMultiRowListItemRenderer": {
+                                                        "title": {
+                                                            "runs": [
+                                                                {
+                                                                    "text": "Pick Two"
+                                                                }
+                                                            ]
+                                                        },
+                                                        "subtitle": {
+                                                            "runs": [
+                                                                {
+                                                                    "text": "Artist B"
+                                                                }
+                                                            ]
+                                                        },
+                                                        "thumbnail": {
+                                                            "musicThumbnailRenderer": {
+                                                                "thumbnail": {
+                                                                    "thumbnails": [
+                                                                        {
+                                                                            "url": "https://example.invalid/thumb2.jpg",
+                                                                            "width": 60,
+                                                                            "height": 60
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            }
+                                                        },
+                                                        "onTap": {
+                                                            "watchEndpoint": {
+                                                                "videoId": "qp00000002"
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}

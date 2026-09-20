@@ -1,0 +1,133 @@
+{
+  "$schema_version": 1,
+  "toggles": {
+    "download_enabled": false,
+    "youtube_auth_enabled": true,
+    "video_playback_enabled": true,
+    "dev_mode_enabled": true,
+    "appearance_settings_enabled": true,
+    "review_mode_enabled": false,
+    "home_continuation_drain_enabled": false
+  },
+  "monetization": {
+    "free_skip_limit": 12,
+    "free_download_limit": 5,
+    "premium_enabled": true,
+    "lifetime_enabled": true,
+    "ads_enabled": false,
+    "ads_skip_frequency": 4,
+    "ads_section_interval": 3,
+    "ads_song_interval": 10,
+    "terms_of_service_url": "",
+    "privacy_policy_url": ""
+  },
+  "audio": {
+    "bitrate_low": 64000,
+    "bitrate_medium": 128000,
+    "bitrate_high": 256000
+  },
+  "animations": {
+    "bouncy_response": 0.3,
+    "bouncy_damping": 0.6,
+    "smooth_response": 0.4,
+    "smooth_damping": 0.8,
+    "player_response": 0.5,
+    "player_damping": 0.85,
+    "gentle_duration": 0.25,
+    "crossfade_duration": 0.3
+  },
+  "ui": {
+    "home_mood_carousel_height": 110,
+    "home_mood_item_width": 180,
+    "home_mood_grid_row_height": 48,
+    "scroll_fast_fade_during_fling": true,
+    "scroll_shimmer_timeout_enabled": true
+  },
+  "update": {
+    "min_required_version": "1.0.9",
+    "recommended_version": "1.0.9",
+    "force_update_message": "It's update time. We had release new version.",
+    "app_store_url": "https://apps.apple.com/us/app/lovelys-music/id6761626613",
+    "update_changelog": "Update"
+  },
+  "playback_range": {
+    "range_streaming_v1": false,
+    "range_streaming_cohort_percent": 0,
+    "bounded_preload_v1": false,
+    "range_streaming_kill_switch": false,
+    "range_streaming_kill_switch_epoch": 0,
+    "range_loader_policy_version": 1,
+    "range_header_schema_version": 1
+  },
+  "editorial": {
+    "is_enabled": true,
+    "featured_playlists": [
+      {
+        "id": "editorial_top_vn",
+        "title": "Top 50 Vietnam 🇻🇳",
+        "subtitle": "Bảng xếp hạng âm nhạc thịnh hành nhất Việt Nam",
+        "playlist_id": "PL4fGSI1pDJn5kI81J1fYWK5eZRl1zJ5kM",
+        "thumbnail_url": "",
+        "badge_text": "TRENDING #1"
+      },
+      {
+        "id": "editorial_top_hits",
+        "title": "Today's Top Hits 🌟",
+        "subtitle": "The biggest international hits right now",
+        "playlist_id": "PLFgquLnL59alGJcdc0BEZJb2p7IgkL0Wu",
+        "thumbnail_url": "",
+        "badge_text": "GLOBAL HITS"
+      },
+      {
+        "id": "editorial_lofi_focus",
+        "title": "Deep Focus Lofi ☕️",
+        "subtitle": "Chill beats to study, code and relax",
+        "playlist_id": "PLDIS8bgpb6FkU5v_bX04V4uM_D262e3d-",
+        "thumbnail_url": "",
+        "badge_text": "FOCUS"
+      },
+      {
+        "id": "editorial_acoustic_chill",
+        "title": "Acoustic Chill 🍂",
+        "subtitle": "Warm coffee and gentle acoustic melodies",
+        "playlist_id": "PLrAl6rVqgUq98N_l3gN0kY-2PZgD0M7zX",
+        "thumbnail_url": "",
+        "badge_text": "RELAX"
+      }
+    ]
+  },
+  "announcements": [
+    {
+      "id": "dev_notice_01",
+      "is_active": false,
+      "level": "info",
+      "message": "Welcome to LovelyMusic Beta! Enjoy lossless audio streaming.",
+      "action_title": "Learn More",
+      "action_url": ""
+    }
+  ],
+  "seasonal_theme": {
+    "is_enabled": true,
+    "theme_name": "new_year",
+    "accent_color_light": "#DC2626",
+    "accent_color_dark": "#EF4444",
+    "background_gradient_light": ["#FFF1F2", "#FEF3C7"],
+    "background_gradient_dark": ["#1E0A0A", "#140B00"],
+    "card_gradient_light": ["#FFE4E6", "#FDE68A"],
+    "card_gradient_dark": ["#300E0E", "#281700"],
+    "banner_title": "Chúc Mừng Năm Mới 🧧",
+    "banner_subtitle": "Âm nhạc rộn ràng đón xuân may mắn",
+    "banner_image_url": "",
+    "show_ambient_particles": true,
+    "particle_duration_seconds": 12,
+    "particle_speed_multiplier": 1.0,
+    "particle_count": 20
+  },
+  "paywall_promo": {
+    "is_enabled": false,
+    "badge_text": "LIMITED TIME OFFER",
+    "headline": "Upgrade to LovelyMusic Pro",
+    "subheadline": "Enjoy unlimited skips, studio-grade bitrate, and offline cache",
+    "highlighted_product_id": "com.lovelymusic.lifetime"
+  }
+}

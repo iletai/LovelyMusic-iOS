@@ -1,0 +1,83 @@
+{
+    "_comment": "S5.1 remediation regression: real YouTube podcast shelves expose 2 flexColumns (title + host/creator). Without hoisting podcast detection above mapAlbum, the `columns.count >= 2` guard claims this as `.album`. Mapper must emit `.playlist(Playlist{isPodcast:true})` and use the canonical `MUSIC_PAGE_TYPE_PODCAST_SHOW_DETAIL_PAGE` constant. Pins Claude F1 + Codex F1.",
+    "contents": {
+        "singleColumnBrowseResultsRenderer": {
+            "tabs": [
+                {
+                    "tabRenderer": {
+                        "content": {
+                            "sectionListRenderer": {
+                                "contents": [
+                                    {
+                                        "musicShelfRenderer": {
+                                            "title": {
+                                                "runs": [
+                                                    {
+                                                        "text": "Top podcast shows"
+                                                    }
+                                                ]
+                                            },
+                                            "contents": [
+                                                {
+                                                    "musicResponsiveListItemRenderer": {
+                                                        "flexColumns": [
+                                                            {
+                                                                "musicResponsiveListItemFlexColumnRenderer": {
+                                                                    "text": {
+                                                                        "runs": [
+                                                                            {
+                                                                                "text": "Hard Fork"
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                }
+                                                            },
+                                                            {
+                                                                "musicResponsiveListItemFlexColumnRenderer": {
+                                                                    "text": {
+                                                                        "runs": [
+                                                                            {
+                                                                                "text": "The New York Times"
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                }
+                                                            }
+                                                        ],
+                                                        "thumbnail": {
+                                                            "musicThumbnailRenderer": {
+                                                                "thumbnail": {
+                                                                    "thumbnails": [
+                                                                        {
+                                                                            "url": "https://example.invalid/podcast_hardfork_2flex.jpg",
+                                                                            "width": 60,
+                                                                            "height": 60
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            }
+                                                        },
+                                                        "navigationEndpoint": {
+                                                            "browseEndpoint": {
+                                                                "browseId": "MPSPPLN_HardFork",
+                                                                "browseEndpointContextSupportedConfigs": {
+                                                                    "browseEndpointContextMusicConfig": {
+                                                                        "pageType": "MUSIC_PAGE_TYPE_PODCAST_SHOW_DETAIL_PAGE"
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}

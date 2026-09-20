@@ -1,0 +1,64 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "sweetpad-lldb",
+            "request": "attach",
+            "name": "SweetPad: Build and Run (Wait for debugger)",
+            "preLaunchTask": "sweetpad: debugging-launch"
+        },
+        {
+            "type": "sweetpad-lldb",
+            "request": "attach",
+            "name": "SweetPad: Launch Only (Attach debugger)",
+            "preLaunchTask": "sweetpad: launch"
+        },
+        {
+            "type": "sweetpad-lldb",
+            "request": "attach",
+            "name": "SweetPad: Build Release + Debug",
+            "preLaunchTask": "sweetpad: launch release",
+            "codelldbAttributes": {
+                "initCommands": [
+                    "settings set target.language swift"
+                ]
+            }
+        },
+        {
+            "type": "lldb",
+            "request": "attach",
+            "name": "Build (Terminal log) + Attach Debugger",
+            "program": "${command:sweetpad.debugger.getAppPath}",
+            "preLaunchTask": "Build & Launch for Debug (Terminal)"
+        },
+        {
+            "type": "sweetpad-lldb",
+            "request": "attach",
+            "name": "SweetPad: Debug + Tail Logs (Copilot readable)",
+            "preLaunchTask": "SweetPad Build + Tail Logs"
+        },
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:LovelyMusic}/fastlane/swift",
+            "name": "Debug fastlaneRunner (fastlane/swift)",
+            "target": "fastlaneRunner",
+            "configuration": "debug",
+            "preLaunchTask": "swift: Build Debug fastlaneRunner (fastlane/swift)"
+        },
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:LovelyMusic}/fastlane/swift",
+            "name": "Release fastlaneRunner (fastlane/swift)",
+            "target": "fastlaneRunner",
+            "configuration": "release",
+            "preLaunchTask": "swift: Build Release fastlaneRunner (fastlane/swift)"
+        }
+    ]
+}

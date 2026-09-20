@@ -1,0 +1,10 @@
+# App identifier and Apple ID for Fastlane
+# Docs: https://docs.fastlane.tools/advanced/Appfile/
+
+app_identifier("com.lovelymusic.app")
+
+apple_id(ENV["APPLE_ID"] || "your-apple-id@example.com")
+
+team_id(ENV["APPLE_TEAM_ID"] || "YOUR_TEAM_ID")
+
+itc_team_id(ENV["ITC_TEAM_ID"])                    # App Store Connect team (if multiple)

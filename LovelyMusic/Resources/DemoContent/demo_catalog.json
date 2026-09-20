@@ -1,0 +1,557 @@
+{
+    "_generated": "scripts/generate_demo_catalog.py from MANIFEST.json",
+    "_license": "All tracks: CC BY 3.0 by Kevin MacLeod (incompetech.com). See Resources/DemoContent/Audio/MANIFEST.json for provenance.",
+    "artists": [
+        {
+            "id": "demo_artist_kevin_macleod",
+            "name": "Kevin MacLeod",
+            "thumbnailURL": "demo_artist_kevin_macleod",
+            "subscriberCount": "Public Domain · CC BY 3.0",
+            "description": "Composer of over 2,000 royalty-free music pieces. All tracks in this demo catalog are sourced from his Internet Archive collection (https://archive.org/details/Incompetech) and licensed under Creative Commons Attribution 3.0 (https://creativecommons.org/licenses/by/3.0/)."
+        }
+    ],
+    "albums": [
+        {
+            "id": "demo_album_peaceful",
+            "title": "Peaceful Moments",
+            "artistName": "Kevin MacLeod",
+            "artistId": "demo_artist_kevin_macleod",
+            "year": "2024",
+            "thumbnailURL": "demo_album_peaceful",
+            "description": "Gentle melodies perfect for calm moments.",
+            "songs": [
+                {
+                    "id": "demo_song_morning_light",
+                    "title": "Arcadia",
+                    "artistName": "Kevin MacLeod",
+                    "artistId": "demo_artist_kevin_macleod",
+                    "albumName": "Peaceful Moments",
+                    "albumId": "demo_album_peaceful",
+                    "duration": 98,
+                    "thumbnailURL": "demo_album_peaceful"
+                },
+                {
+                    "id": "demo_song_gentle_breeze",
+                    "title": "Autumn Day",
+                    "artistName": "Kevin MacLeod",
+                    "artistId": "demo_artist_kevin_macleod",
+                    "albumName": "Peaceful Moments",
+                    "albumId": "demo_album_peaceful",
+                    "duration": 185,
+                    "thumbnailURL": "demo_album_peaceful"
+                },
+                {
+                    "id": "demo_song_quiet_moments",
+                    "title": "Awaiting Return",
+                    "artistName": "Kevin MacLeod",
+                    "artistId": "demo_artist_kevin_macleod",
+                    "albumName": "Peaceful Moments",
+                    "albumId": "demo_album_peaceful",
+                    "duration": 105,
+                    "thumbnailURL": "demo_album_peaceful"
+                },
+                {
+                    "id": "demo_song_evening_calm",
+                    "title": "At Rest",
+                    "artistName": "Kevin MacLeod",
+                    "artistId": "demo_artist_kevin_macleod",
+                    "albumName": "Peaceful Moments",
+                    "albumId": "demo_album_peaceful",
+                    "duration": 206,
+                    "thumbnailURL": "demo_album_peaceful"
+                }
+            ]
+        },
+        {
+            "id": "demo_album_cinematic",
+            "title": "Cinematic Intensity",
+            "artistName": "Kevin MacLeod",
+            "artistId": "demo_artist_kevin_macleod",
+            "year": "2024",
+            "thumbnailURL": "demo_album_cinematic",
+            "description": "Epic orchestral pieces for dramatic moments.",
+            "songs": [
+                {
+                    "id": "demo_song_epic_rise",
+                    "title": "Anguish",
+                    "artistName": "Kevin MacLeod",
+                    "artistId": "demo_artist_kevin_macleod",
+                    "albumName": "Cinematic Intensity",
+                    "albumId": "demo_album_cinematic",
+                    "duration": 239,
+                    "thumbnailURL": "demo_album_cinematic"
+                },
+                {
+                    "id": "demo_song_battle_drums",
+                    "title": "Asian Drums",
+                    "artistName": "Kevin MacLeod",
+                    "artistId": "demo_artist_kevin_macleod",
+                    "albumName": "Cinematic Intensity",
+                    "albumId": "demo_album_cinematic",
+                    "duration": 138,
+                    "thumbnailURL": "demo_album_cinematic"
+                },
+                {
+                    "id": "demo_song_heroic_theme",
+                    "title": "Aces High",
+                    "artistName": "Kevin MacLeod",
+                    "artistId": "demo_artist_kevin_macleod",
+                    "albumName": "Cinematic Intensity",
+                    "albumId": "demo_album_cinematic",
+                    "duration": 193,
+                    "thumbnailURL": "demo_album_cinematic"
+                },
+                {
+                    "id": "demo_song_dark_tension",
+                    "title": "Anxiety",
+                    "artistName": "Kevin MacLeod",
+                    "artistId": "demo_artist_kevin_macleod",
+                    "albumName": "Cinematic Intensity",
+                    "albumId": "demo_album_cinematic",
+                    "duration": 111,
+                    "thumbnailURL": "demo_album_cinematic"
+                },
+                {
+                    "id": "demo_song_victory_march",
+                    "title": "Americana",
+                    "artistName": "Kevin MacLeod",
+                    "artistId": "demo_artist_kevin_macleod",
+                    "albumName": "Cinematic Intensity",
+                    "albumId": "demo_album_cinematic",
+                    "duration": 202,
+                    "thumbnailURL": "demo_album_cinematic"
+                },
+                {
+                    "id": "demo_song_final_stand",
+                    "title": "Action",
+                    "artistName": "Kevin MacLeod",
+                    "artistId": "demo_artist_kevin_macleod",
+                    "albumName": "Cinematic Intensity",
+                    "albumId": "demo_album_cinematic",
+                    "duration": 195,
+                    "thumbnailURL": "demo_album_cinematic"
+                },
+                {
+                    "id": "demo_song_event_horizon",
+                    "title": "Aurea Carmina",
+                    "artistName": "Kevin MacLeod",
+                    "artistId": "demo_artist_kevin_macleod",
+                    "albumName": "Cinematic Intensity",
+                    "albumId": "demo_album_cinematic",
+                    "duration": 211,
+                    "thumbnailURL": "demo_album_cinematic"
+                }
+            ]
+        },
+        {
+            "id": "demo_album_retro",
+            "title": "Retro Playful",
+            "artistName": "Kevin MacLeod",
+            "artistId": "demo_artist_kevin_macleod",
+            "year": "2024",
+            "thumbnailURL": "demo_album_retro",
+            "description": "Playful and quirky tunes with a vintage feel.",
+            "songs": [
+                {
+                    "id": "demo_song_scheming_weasel",
+                    "title": "Awkward Meeting",
+                    "artistName": "Kevin MacLeod",
+                    "artistId": "demo_artist_kevin_macleod",
+                    "albumName": "Retro Playful",
+                    "albumId": "demo_album_retro",
+                    "duration": 84,
+                    "thumbnailURL": "demo_album_retro"
+                },
+                {
+                    "id": "demo_song_monkeys_spinning",
+                    "title": "Adventure Meme",
+                    "artistName": "Kevin MacLeod",
+                    "artistId": "demo_artist_kevin_macleod",
+                    "albumName": "Retro Playful",
+                    "albumId": "demo_album_retro",
+                    "duration": 101,
+                    "thumbnailURL": "demo_album_retro"
+                },
+                {
+                    "id": "demo_song_fluffing_duck",
+                    "title": "Amazing Plan",
+                    "artistName": "Kevin MacLeod",
+                    "artistId": "demo_artist_kevin_macleod",
+                    "albumName": "Retro Playful",
+                    "albumId": "demo_album_retro",
+                    "duration": 87,
+                    "thumbnailURL": "demo_album_retro"
+                },
+                {
+                    "id": "demo_song_pixel_peeker",
+                    "title": "8bit Dungeon Boss",
+                    "artistName": "Kevin MacLeod",
+                    "artistId": "demo_artist_kevin_macleod",
+                    "albumName": "Retro Playful",
+                    "albumId": "demo_album_retro",
+                    "duration": 172,
+                    "thumbnailURL": "demo_album_retro"
+                },
+                {
+                    "id": "demo_song_the_builder",
+                    "title": "At Launch",
+                    "artistName": "Kevin MacLeod",
+                    "artistId": "demo_artist_kevin_macleod",
+                    "albumName": "Retro Playful",
+                    "albumId": "demo_album_retro",
+                    "duration": 185,
+                    "thumbnailURL": "demo_album_retro"
+                }
+            ]
+        },
+        {
+            "id": "demo_album_ethereal",
+            "title": "Ethereal Atmospheres",
+            "artistName": "Kevin MacLeod",
+            "artistId": "demo_artist_kevin_macleod",
+            "year": "2024",
+            "thumbnailURL": "demo_album_ethereal",
+            "description": "Ambient compositions for focus and relaxation.",
+            "songs": [
+                {
+                    "id": "demo_song_aurora",
+                    "title": "Atlantean Twilight",
+                    "artistName": "Kevin MacLeod",
+                    "artistId": "demo_artist_kevin_macleod",
+                    "albumName": "Ethereal Atmospheres",
+                    "albumId": "demo_album_ethereal",
+                    "duration": 171,
+                    "thumbnailURL": "demo_album_ethereal"
+                },
+                {
+                    "id": "demo_song_nebula_drift",
+                    "title": "Anamalie",
+                    "artistName": "Kevin MacLeod",
+                    "artistId": "demo_artist_kevin_macleod",
+                    "albumName": "Ethereal Atmospheres",
+                    "albumId": "demo_album_ethereal",
+                    "duration": 208,
+                    "thumbnailURL": "demo_album_ethereal"
+                },
+                {
+                    "id": "demo_song_cosmic_waves",
+                    "title": "Aftermath",
+                    "artistName": "Kevin MacLeod",
+                    "artistId": "demo_artist_kevin_macleod",
+                    "albumName": "Ethereal Atmospheres",
+                    "albumId": "demo_album_ethereal",
+                    "duration": 193,
+                    "thumbnailURL": "demo_album_ethereal"
+                },
+                {
+                    "id": "demo_song_starfield",
+                    "title": "Arid Foothills",
+                    "artistName": "Kevin MacLeod",
+                    "artistId": "demo_artist_kevin_macleod",
+                    "albumName": "Ethereal Atmospheres",
+                    "albumId": "demo_album_ethereal",
+                    "duration": 198,
+                    "thumbnailURL": "demo_album_ethereal"
+                },
+                {
+                    "id": "demo_song_starlit_path",
+                    "title": "Avec Soin",
+                    "artistName": "Kevin MacLeod",
+                    "artistId": "demo_artist_kevin_macleod",
+                    "albumName": "Ethereal Atmospheres",
+                    "albumId": "demo_album_ethereal",
+                    "duration": 145,
+                    "thumbnailURL": "demo_album_ethereal"
+                },
+                {
+                    "id": "demo_song_solar_wind",
+                    "title": "8bit Dungeon Level",
+                    "artistName": "Kevin MacLeod",
+                    "artistId": "demo_artist_kevin_macleod",
+                    "albumName": "Ethereal Atmospheres",
+                    "albumId": "demo_album_ethereal",
+                    "duration": 217,
+                    "thumbnailURL": "demo_album_ethereal"
+                }
+            ]
+        }
+    ],
+    "sections": [
+        {
+            "title": "Featured Mix",
+            "items": [
+                {
+                    "type": "song",
+                    "id": "demo_song_aurora",
+                    "title": "Atlantean Twilight",
+                    "artistName": "Kevin MacLeod",
+                    "artistId": "demo_artist_kevin_macleod",
+                    "albumName": "Ethereal Atmospheres",
+                    "albumId": "demo_album_ethereal",
+                    "duration": 171,
+                    "thumbnailURL": "demo_album_ethereal"
+                },
+                {
+                    "type": "song",
+                    "id": "demo_song_morning_light",
+                    "title": "Arcadia",
+                    "artistName": "Kevin MacLeod",
+                    "artistId": "demo_artist_kevin_macleod",
+                    "albumName": "Peaceful Moments",
+                    "albumId": "demo_album_peaceful",
+                    "duration": 98,
+                    "thumbnailURL": "demo_album_peaceful"
+                },
+                {
+                    "type": "song",
+                    "id": "demo_song_epic_rise",
+                    "title": "Anguish",
+                    "artistName": "Kevin MacLeod",
+                    "artistId": "demo_artist_kevin_macleod",
+                    "albumName": "Cinematic Intensity",
+                    "albumId": "demo_album_cinematic",
+                    "duration": 239,
+                    "thumbnailURL": "demo_album_cinematic"
+                },
+                {
+                    "type": "song",
+                    "id": "demo_song_scheming_weasel",
+                    "title": "Awkward Meeting",
+                    "artistName": "Kevin MacLeod",
+                    "artistId": "demo_artist_kevin_macleod",
+                    "albumName": "Retro Playful",
+                    "albumId": "demo_album_retro",
+                    "duration": 84,
+                    "thumbnailURL": "demo_album_retro"
+                },
+                {
+                    "type": "song",
+                    "id": "demo_song_nebula_drift",
+                    "title": "Anamalie",
+                    "artistName": "Kevin MacLeod",
+                    "artistId": "demo_artist_kevin_macleod",
+                    "albumName": "Ethereal Atmospheres",
+                    "albumId": "demo_album_ethereal",
+                    "duration": 208,
+                    "thumbnailURL": "demo_album_ethereal"
+                },
+                {
+                    "type": "album",
+                    "id": "demo_album_peaceful",
+                    "title": "Peaceful Moments",
+                    "artistName": "Kevin MacLeod",
+                    "artistId": "demo_artist_kevin_macleod",
+                    "year": "2024",
+                    "thumbnailURL": "demo_album_peaceful"
+                }
+            ]
+        },
+        {
+            "title": "Chill Vibes",
+            "items": [
+                {
+                    "type": "song",
+                    "id": "demo_song_gentle_breeze",
+                    "title": "Autumn Day",
+                    "artistName": "Kevin MacLeod",
+                    "artistId": "demo_artist_kevin_macleod",
+                    "albumName": "Peaceful Moments",
+                    "albumId": "demo_album_peaceful",
+                    "duration": 185,
+                    "thumbnailURL": "demo_album_peaceful"
+                },
+                {
+                    "type": "song",
+                    "id": "demo_song_quiet_moments",
+                    "title": "Awaiting Return",
+                    "artistName": "Kevin MacLeod",
+                    "artistId": "demo_artist_kevin_macleod",
+                    "albumName": "Peaceful Moments",
+                    "albumId": "demo_album_peaceful",
+                    "duration": 105,
+                    "thumbnailURL": "demo_album_peaceful"
+                },
+                {
+                    "type": "song",
+                    "id": "demo_song_cosmic_waves",
+                    "title": "Aftermath",
+                    "artistName": "Kevin MacLeod",
+                    "artistId": "demo_artist_kevin_macleod",
+                    "albumName": "Ethereal Atmospheres",
+                    "albumId": "demo_album_ethereal",
+                    "duration": 193,
+                    "thumbnailURL": "demo_album_ethereal"
+                },
+                {
+                    "type": "song",
+                    "id": "demo_song_starlit_path",
+                    "title": "Avec Soin",
+                    "artistName": "Kevin MacLeod",
+                    "artistId": "demo_artist_kevin_macleod",
+                    "albumName": "Ethereal Atmospheres",
+                    "albumId": "demo_album_ethereal",
+                    "duration": 145,
+                    "thumbnailURL": "demo_album_ethereal"
+                },
+                {
+                    "type": "song",
+                    "id": "demo_song_evening_calm",
+                    "title": "At Rest",
+                    "artistName": "Kevin MacLeod",
+                    "artistId": "demo_artist_kevin_macleod",
+                    "albumName": "Peaceful Moments",
+                    "albumId": "demo_album_peaceful",
+                    "duration": 206,
+                    "thumbnailURL": "demo_album_peaceful"
+                },
+                {
+                    "type": "album",
+                    "id": "demo_album_ethereal",
+                    "title": "Ethereal Atmospheres",
+                    "artistName": "Kevin MacLeod",
+                    "artistId": "demo_artist_kevin_macleod",
+                    "year": "2024",
+                    "thumbnailURL": "demo_album_ethereal"
+                }
+            ]
+        },
+        {
+            "title": "Retro Picks",
+            "items": [
+                {
+                    "type": "song",
+                    "id": "demo_song_fluffing_duck",
+                    "title": "Amazing Plan",
+                    "artistName": "Kevin MacLeod",
+                    "artistId": "demo_artist_kevin_macleod",
+                    "albumName": "Retro Playful",
+                    "albumId": "demo_album_retro",
+                    "duration": 87,
+                    "thumbnailURL": "demo_album_retro"
+                },
+                {
+                    "type": "song",
+                    "id": "demo_song_pixel_peeker",
+                    "title": "8bit Dungeon Boss",
+                    "artistName": "Kevin MacLeod",
+                    "artistId": "demo_artist_kevin_macleod",
+                    "albumName": "Retro Playful",
+                    "albumId": "demo_album_retro",
+                    "duration": 172,
+                    "thumbnailURL": "demo_album_retro"
+                },
+                {
+                    "type": "song",
+                    "id": "demo_song_monkeys_spinning",
+                    "title": "Adventure Meme",
+                    "artistName": "Kevin MacLeod",
+                    "artistId": "demo_artist_kevin_macleod",
+                    "albumName": "Retro Playful",
+                    "albumId": "demo_album_retro",
+                    "duration": 101,
+                    "thumbnailURL": "demo_album_retro"
+                },
+                {
+                    "type": "song",
+                    "id": "demo_song_the_builder",
+                    "title": "At Launch",
+                    "artistName": "Kevin MacLeod",
+                    "artistId": "demo_artist_kevin_macleod",
+                    "albumName": "Retro Playful",
+                    "albumId": "demo_album_retro",
+                    "duration": 185,
+                    "thumbnailURL": "demo_album_retro"
+                },
+                {
+                    "type": "song",
+                    "id": "demo_song_scheming_weasel",
+                    "title": "Awkward Meeting",
+                    "artistName": "Kevin MacLeod",
+                    "artistId": "demo_artist_kevin_macleod",
+                    "albumName": "Retro Playful",
+                    "albumId": "demo_album_retro",
+                    "duration": 84,
+                    "thumbnailURL": "demo_album_retro"
+                },
+                {
+                    "type": "album",
+                    "id": "demo_album_retro",
+                    "title": "Retro Playful",
+                    "artistName": "Kevin MacLeod",
+                    "artistId": "demo_artist_kevin_macleod",
+                    "year": "2024",
+                    "thumbnailURL": "demo_album_retro"
+                }
+            ]
+        },
+        {
+            "title": "Epic & Cinematic",
+            "items": [
+                {
+                    "type": "song",
+                    "id": "demo_song_battle_drums",
+                    "title": "Asian Drums",
+                    "artistName": "Kevin MacLeod",
+                    "artistId": "demo_artist_kevin_macleod",
+                    "albumName": "Cinematic Intensity",
+                    "albumId": "demo_album_cinematic",
+                    "duration": 138,
+                    "thumbnailURL": "demo_album_cinematic"
+                },
+                {
+                    "type": "song",
+                    "id": "demo_song_heroic_theme",
+                    "title": "Aces High",
+                    "artistName": "Kevin MacLeod",
+                    "artistId": "demo_artist_kevin_macleod",
+                    "albumName": "Cinematic Intensity",
+                    "albumId": "demo_album_cinematic",
+                    "duration": 193,
+                    "thumbnailURL": "demo_album_cinematic"
+                },
+                {
+                    "type": "song",
+                    "id": "demo_song_dark_tension",
+                    "title": "Anxiety",
+                    "artistName": "Kevin MacLeod",
+                    "artistId": "demo_artist_kevin_macleod",
+                    "albumName": "Cinematic Intensity",
+                    "albumId": "demo_album_cinematic",
+                    "duration": 111,
+                    "thumbnailURL": "demo_album_cinematic"
+                },
+                {
+                    "type": "song",
+                    "id": "demo_song_victory_march",
+                    "title": "Americana",
+                    "artistName": "Kevin MacLeod",
+                    "artistId": "demo_artist_kevin_macleod",
+                    "albumName": "Cinematic Intensity",
+                    "albumId": "demo_album_cinematic",
+                    "duration": 202,
+                    "thumbnailURL": "demo_album_cinematic"
+                },
+                {
+                    "type": "song",
+                    "id": "demo_song_final_stand",
+                    "title": "Action",
+                    "artistName": "Kevin MacLeod",
+                    "artistId": "demo_artist_kevin_macleod",
+                    "albumName": "Cinematic Intensity",
+                    "albumId": "demo_album_cinematic",
+                    "duration": 195,
+                    "thumbnailURL": "demo_album_cinematic"
+                },
+                {
+                    "type": "album",
+                    "id": "demo_album_cinematic",
+                    "title": "Cinematic Intensity",
+                    "artistName": "Kevin MacLeod",
+                    "artistId": "demo_artist_kevin_macleod",
+                    "year": "2024",
+                    "thumbnailURL": "demo_album_cinematic"
+                }
+            ]
+        }
+    ]
+}

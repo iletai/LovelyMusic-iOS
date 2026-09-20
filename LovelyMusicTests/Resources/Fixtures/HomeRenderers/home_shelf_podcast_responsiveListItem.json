@@ -1,0 +1,72 @@
+{
+    "_comment": "S5.1 RED: musicShelfRenderer + musicResponsiveListItemRenderer for a Podcast show. Single flex column (title only), browseId 'MPSPPLpodcast002', pageType MUSIC_PAGE_TYPE_PODCAST. Mapper must emit .playlist(Playlist{isPodcast:true}). NOTE for implementer: existing mapResponsiveListItem may currently route 1-flexColumn+browseId items to .artist (mapArtist returns Artist regardless of pageType). Implementer will need to add a podcast detection branch BEFORE the generic song/album/artist/playlist fallback chain.",
+    "contents": {
+        "singleColumnBrowseResultsRenderer": {
+            "tabs": [
+                {
+                    "tabRenderer": {
+                        "content": {
+                            "sectionListRenderer": {
+                                "contents": [
+                                    {
+                                        "musicShelfRenderer": {
+                                            "title": {
+                                                "runs": [
+                                                    {
+                                                        "text": "Top podcast shows"
+                                                    }
+                                                ]
+                                            },
+                                            "contents": [
+                                                {
+                                                    "musicResponsiveListItemRenderer": {
+                                                        "flexColumns": [
+                                                            {
+                                                                "musicResponsiveListItemFlexColumnRenderer": {
+                                                                    "text": {
+                                                                        "runs": [
+                                                                            {
+                                                                                "text": "Hard Fork"
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                }
+                                                            }
+                                                        ],
+                                                        "thumbnail": {
+                                                            "musicThumbnailRenderer": {
+                                                                "thumbnail": {
+                                                                    "thumbnails": [
+                                                                        {
+                                                                            "url": "https://example.invalid/podcast_hardfork.jpg",
+                                                                            "width": 60,
+                                                                            "height": 60
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            }
+                                                        },
+                                                        "navigationEndpoint": {
+                                                            "browseEndpoint": {
+                                                                "browseId": "MPSPPLhardfork0002",
+                                                                "browseEndpointContextSupportedConfigs": {
+                                                                    "browseEndpointContextMusicConfig": {
+                                                                        "pageType": "MUSIC_PAGE_TYPE_PODCAST"
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}

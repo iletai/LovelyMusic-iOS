@@ -1,0 +1,28 @@
+# Snapfile — Fastlane Snapshot Configuration
+# Docs: https://docs.fastlane.tools/actions/capture_ios_screenshots/
+
+devices([
+  "iPhone 16 Pro Max",
+  "iPhone 16 Plus",
+  "iPhone 16 Pro",
+  "iPad Pro 13-inch (M4)"
+])
+
+languages([
+  "en-US"
+])
+
+scheme("LovelyMusicUITests")
+project("LovelyMusic.xcodeproj")
+
+output_directory("./fastlane/screenshots")
+clear_previous_screenshots(true)
+
+override_status_bar(true)
+override_status_bar_arguments("--time 9:41 --batteryState charged --batteryLevel 100 --cellularMode active --cellularBars 4")
+
+stop_after_first_error(false)
+concurrent_simulators(false)
+
+# Skip cleanup to speed up re-runs
+skip_open_summary(false)

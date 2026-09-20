@@ -1,0 +1,108 @@
+{
+    "_comment": "SOURCE: synthesized to mirror a real FEmusic_home musicCardShelfRenderer that carries a hero (onTap.watchEndpoint) PLUS card.contents secondary rows. Cf. InnerTune MusicCardShelfRenderer.kt and YouTube.kt#L106-L121 — section title comes from header.musicCardShelfHeaderBasicRenderer.title. Today's mapper drops contents entirely and uses card.title for the section, so this card surfaces as a single tile titled 'Untitled'.",
+    "contents": {
+        "singleColumnBrowseResultsRenderer": {
+            "tabs": [
+                {
+                    "tabRenderer": {
+                        "content": {
+                            "sectionListRenderer": {
+                                "contents": [
+                                    {
+                                        "musicCardShelfRenderer": {
+                                            "header": {
+                                                "musicCardShelfHeaderBasicRenderer": {
+                                                    "title": {
+                                                        "runs": [
+                                                            {
+                                                                "text": "Quick picks"
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            },
+                                            "title": {
+                                                "runs": [
+                                                    {
+                                                        "text": "Hero Song"
+                                                    }
+                                                ]
+                                            },
+                                            "subtitle": {
+                                                "runs": [
+                                                    {
+                                                        "text": "Hero Artist"
+                                                    }
+                                                ]
+                                            },
+                                            "thumbnail": {
+                                                "musicThumbnailRenderer": {
+                                                    "thumbnail": {
+                                                        "thumbnails": [
+                                                            {
+                                                                "url": "https://example.invalid/hero.jpg",
+                                                                "width": 480,
+                                                                "height": 480
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            },
+                                            "onTap": {
+                                                "watchEndpoint": {
+                                                    "videoId": "heroVid01"
+                                                }
+                                            },
+                                            "contents": [
+                                                {
+                                                    "musicResponsiveListItemRenderer": {
+                                                        "flexColumns": [
+                                                            {
+                                                                "musicResponsiveListItemFlexColumnRenderer": {
+                                                                    "text": {
+                                                                        "runs": [
+                                                                            {
+                                                                                "text": "Sec One"
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                }
+                                                            }
+                                                        ],
+                                                        "playlistItemData": {
+                                                            "videoId": "secVid01"
+                                                        }
+                                                    }
+                                                },
+                                                {
+                                                    "musicResponsiveListItemRenderer": {
+                                                        "flexColumns": [
+                                                            {
+                                                                "musicResponsiveListItemFlexColumnRenderer": {
+                                                                    "text": {
+                                                                        "runs": [
+                                                                            {
+                                                                                "text": "Sec Two"
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                }
+                                                            }
+                                                        ],
+                                                        "playlistItemData": {
+                                                            "videoId": "secVid02"
+                                                        }
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,48 @@
+ABOUT LOVELYMUSIC
+LovelyMusic is a music player application that provides a beautiful,
+privacy-focused listening experience. The app plays royalty-free music
+from curated collections.
+
+CONTENT LICENSING
+All music content in the app is royalty-free and properly licensed:
+• Tracks sourced from Pixabay Music (Pixabay Content License)
+• Tracks by Kevin MacLeod (Incompetech) under Creative Commons
+  Attribution 3.0 License — credited in-app
+• Custom artwork created by the development team
+
+No third-party copyrighted content (audio, video, or artwork) is
+included in the app, its screenshots, or previews.
+
+GUIDELINE 5.2.3 RESPONSE
+The app does not access any third-party streaming service. All audio
+content is either bundled within the app or hosted on our own server
+infrastructure. No unauthorized content access occurs.
+
+GUIDELINE 5.2.1 RESPONSE
+All album artwork displayed in the app, screenshots, and previews
+is original artwork created by the development team. No protected
+third-party album covers or copyrighted imagery is used.
+
+TESTING INSTRUCTIONS
+• No account or login required
+• Launch the app to see the home screen with curated music sections
+• Tap any song to start playback
+• Use the search tab to find songs in the catalog
+• Create playlists in the Library tab
+
+SUBSCRIPTION INFORMATION
+LovelyMusic offers optional premium subscriptions via StoreKit 2:
+• Monthly: $4.99/month (auto-renewable)
+• Yearly: $29.99/year (auto-renewable)
+• Lifetime: $79.99 (non-consumable, one-time)
+Premium features: ad-free, high quality audio, unlimited skips,
+synced lyrics, equalizer.
+To test: Settings > Premium section. All IAP products configured
+in StoreKit sandbox.
+
+PRIVACY
+All user data stored locally on-device. No personal data transmitted
+to third-party servers. No IDFA or tracking frameworks used.
+
+Privacy Policy: https://www.iletai.qzz.io/policy#privacy-policy
+Terms of Use: https://www.iletai.qzz.io/policy#terms-of-use
