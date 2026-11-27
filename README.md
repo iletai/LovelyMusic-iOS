@@ -5,7 +5,7 @@
 <h1 align="center">LovelyMusic</h1>
 
 <p align="center">
-  <strong>Enterprise-grade, open-source iOS music streaming client built with Clean Architecture, Swift 5.9, and SwiftUI.</strong><br>
+  <strong>Enterprise-grade iOS music streaming client built with Clean Architecture, Swift 5.9, and SwiftUI.</strong><br>
   Direct YouTube Music InnerTube JSON-RPC actor &bull; Zero third-party audio middleware &bull; Real-time synced LRC lyrics &bull; Apple CarPlay &bull; 100% Non-profit.
 </p>
 
@@ -13,7 +13,7 @@
   <a href="https://developer.apple.com/ios/"><img src="https://img.shields.io/badge/Platform-iOS%2018.0%2B-007AFF?style=for-the-badge&logo=apple&logoColor=white" alt="iOS 18.0+" /></a>
   <a href="https://swift.org"><img src="https://img.shields.io/badge/Swift-5.9-F05138?style=for-the-badge&logo=swift&logoColor=white" alt="Swift 5.9" /></a>
   <a href="https://developer.apple.com/xcode/swiftui/"><img src="https://img.shields.io/badge/UI-SwiftUI%20%2B%20Observation-5856D6?style=for-the-badge&logo=swift&logoColor=white" alt="SwiftUI" /></a>
-  <a href="LICENSE"><img src="https://img.shields.io/badge/License-Apache%202.0-2EA44F?style=for-the-badge" alt="Apache 2.0" /></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/License-Proprietary-B31D1D?style=for-the-badge" alt="Proprietary" /></a>
   <a href="#-system-architecture--clean-design-patterns"><img src="https://img.shields.io/badge/Architecture-Clean%20Architecture%206--Layer-8A2BE2?style=for-the-badge" alt="Clean Architecture" /></a>
   <a href="#1-zero-dependency-native-audio-pipeline"><img src="https://img.shields.io/badge/Audio-AVFoundation%20Native-FF9500?style=for-the-badge&logo=apple&logoColor=white" alt="AVFoundation" /></a>
 </p>
@@ -45,7 +45,7 @@
 
 ## 🌟 Executive Summary
 
-**LovelyMusic** is an open-source iOS music streaming application created as a reference implementation of idiomatic, production-grade Swift engineering. Rather than relying on heavyweight third-party audio wrappers or closed-source SDKs, the project implements a clean client layer directly atop Apple's `AVFoundation` and YouTube Music's InnerTube JSON-RPC protocols.
+**LovelyMusic** is a source-available iOS music streaming application created as a reference implementation of idiomatic, production-grade Swift engineering. Rather than relying on heavyweight third-party audio wrappers or closed-source SDKs, the project implements a clean client layer directly atop Apple's `AVFoundation` and YouTube Music's InnerTube JSON-RPC protocols.
 
 ### Key Highlights
 - **100% Native Audio**: Direct stream playback up to 256 kbps AAC with custom CDN header injection and background fMP4 remuxing.
@@ -385,7 +385,7 @@ xcodebuild test \
 
 ## 🤝 Contributing & Community
 
-We welcome contributions from the open-source community:
+Contributions are welcome. By submitting a pull request, you agree that your contribution may be used and relicensed by the copyright holder under the terms of this repository.
 
 1. Fork the repository and create your branch (`git checkout -b feat/your-feature`).
 2. Maintain strict Clean Architecture layer separation (Domain must not import UI or Data).
@@ -397,20 +397,8 @@ We welcome contributions from the open-source community:
 
 ## 📄 License
 
-LovelyMusic is licensed under the **Apache License 2.0** (APL). See the [LICENSE](LICENSE) file for complete terms.
+Copyright (c) 2026 Le Quang Trong Tai. All rights reserved.
 
-```text
-Copyright 2026 LovelyMusic Contributors
+This repository is proprietary and source-available for viewing only. No permission is granted to use, copy, modify, distribute, or create derivative works from this code without prior written permission. See the [LICENSE](LICENSE) file for the full terms.
 
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
-```
+Versions released before 2026-11-27 were distributed under the Apache License 2.0. That license remains in effect for those versions only.
